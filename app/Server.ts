@@ -1,11 +1,12 @@
-import { Express, Request, Response } from "express";
+import express, { Express, Request, Response } from "express";
 import { Client, createClient } from "@journyio/sdk";
+import cors from "cors";
+import bodyParser from "body-parser";
+import path from "path";
+import dotenv from "dotenv";
+import { readFile } from "fs";
 
-const cors = require("cors");
-const bodyParser = require("body-parser");
-const path = require("path");
-
-require("dotenv").config({ path: path.resolve(__dirname, "./.env") });
+dotenv.config({ path: path.join(__dirname, "/../.env") });
 
 export class Server {
   private app: Express;
@@ -15,11 +16,11 @@ export class Server {
     this.app = app;
 
     const config = {
-      apiKeySecret: process.env.API_KEY,
-      apiUrl: process.env.API_URL,
+      apiKey: process.env.API_KEY,
     };
     this.client = createClient(config);
 
+    app.use(express.static(path.join(__dirname, "/../frontend")));
     app.use(bodyParser.json());
     app.use(function (req, res, next) {
       res.header("Access-Control-Allow-Origin", "*");
@@ -47,8 +48,6 @@ export class Server {
         response = await this.client.trackEvent({
           email: email,
           tag: "pet-information",
-          campaign: "pets",
-          source: "demo-application",
         });
         if (!response.success) {
           res.status(500).send({
@@ -80,11 +79,19 @@ export class Server {
           .send({ message: "The information is correctly stored." });
       }
     );
+
+    this.app.use((request: Request, response: Response) => {
+      readFile(path.join(__dirname, "/../frontend/index.html"), (error, contents) => {
+        if (error) throw error;
+
+        response.send(contents);
+      });
+    });
   }
 
   public start(port: number): void {
     this.app.listen(port, () =>
-      console.log(`Server listening on port ${port}!`)
+      console.log(`🚀 Server listening on http://localhost:${port}!`)
     );
   }
 }

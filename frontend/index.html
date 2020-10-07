@@ -113,7 +113,7 @@
 
         $.ajax({
           type: "POST",
-          url: "http://localhost:3001/pet-information", // TODO
+          url: "http://localhost:3001/pet-information",
           data: JSON.stringify(postData),
           success: () => submitted.attr("hidden", false),
           error: () => error.attr("hidden", false),
