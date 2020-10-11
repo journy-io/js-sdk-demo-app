@@ -1,6 +1,5 @@
 import express, { Express, Request, Response } from "express";
 import { Client, createClient } from "@journyio/sdk";
-import cors from "cors";
 import bodyParser from "body-parser";
 import path from "path";
 import dotenv from "dotenv";
@@ -17,23 +16,15 @@ export class Server {
 
     const config = {
       apiKey: process.env.API_KEY,
+      apiUrl: "http://localhost:4001"
     };
     this.client = createClient(config);
 
     app.use(express.static(path.join(__dirname, "/../frontend")));
     app.use(bodyParser.json());
-    app.use(function (req, res, next) {
-      res.header("Access-Control-Allow-Origin", "*");
-      res.header(
-        "Access-Control-Allow-Headers",
-        "Origin, X-Requested-With, Content-Type, Accept"
-      );
-      next();
-    });
 
     this.app.post(
       "/pet-information",
-      cors(),
       async (req: Request, res: Response): Promise<void> => {
         const {
           email,
