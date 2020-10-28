@@ -15,8 +15,7 @@ export class Server {
     this.app = app;
 
     const config = {
-      apiKey: process.env.API_KEY,
-      apiUrl: "http://localhost:4001"
+      apiKey: process.env.API_KEY
     };
     this.client = createClient(config);
 
