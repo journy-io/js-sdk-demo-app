@@ -1,3 +1,5 @@
+![journy.io](banner.png)
+
 # Demo application JS SDK
 
 This demo application shows you how you can use our [Node.js SDK](https://github.com/journy-io/js-sdk) to track events and update properties.
