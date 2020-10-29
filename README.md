@@ -8,7 +8,7 @@ This demo application shows you how you can use our [Node.js SDK](https://github
 $ npm install
 ```
 
-### Create `.env` file and paste your API key generated via [app.journy.io](https://app.journy.io/?utm_source=github&utm_content=readme-js-demo-app)
+### Copy the `.env-example` file and paste your API key generated via [app.journy.io](https://app.journy.io/?utm_source=github&utm_content=readme-js-demo-app)
 
 ```sh
 $ cp .env-example .env
