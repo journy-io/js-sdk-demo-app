@@ -1,4 +1,4 @@
-![journy.io](banner.png)
+[![journy.io](banner.png)](https://journy.io/?utm_source=github&utm_content=readme-js-demo-app)
 
 # Demo application JS SDK
 
