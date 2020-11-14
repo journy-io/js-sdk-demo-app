@@ -46,7 +46,7 @@ export class Server {
           });
           return;
         }
-        response = await this.client.trackProperties({
+        response = await this.client.updateProperties({
           email: email,
           properties: {
             petName: petName,

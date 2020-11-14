@@ -7,7 +7,7 @@
   "author": "Journy.io",
   "license": "MIT",
   "dependencies": {
-    "@journyio/sdk": "^1.0.0",
+    "@journyio/sdk": "^1.0.2",
     "@types/express": "4.17.7",
     "dotenv": "^8.2.0",
     "express": "4.17.1",
