@@ -1,11 +1,71 @@
-import { Express, Request, Response } from "express";
-import { Client, createClient } from "@journyio/sdk";
+import express, {Express, Request, Response} from "express";
 
-const cors = require("cors");
-const bodyParser = require("body-parser");
-const path = require("path");
+import {Client} from "@journyio/sdk";
+import {HttpClientNode} from "@journyio/http";
 
-require("dotenv").config({ path: path.resolve(__dirname, "./.env") });
+import bodyParser from "body-parser";
+import path from "path";
+import dotenv from "dotenv";
+import {readFile} from "fs";
+import {AppEvent} from "@journyio/sdk/dist/AppEvent";
+
+const passport = require("passport");
+const LocalStrategy = require("passport-local").Strategy;
+const session = require("express-session");
+
+passport.use(new LocalStrategy(function (username, password, done) {
+  if (username && username.trim().length && password && password.trim().length) {
+    const user = {
+      id: "userId",
+      name: "userName",
+      email: username,
+    }
+    // Check if user exists and password is correct
+    return done(null, user);
+  }
+}));
+
+passport.serializeUser(function (user, done) {
+  done(null, user.email);
+});
+
+passport.deserializeUser(function (id, done) {
+  const user = {
+    userId: "userId",
+    username: "userName",
+    email: id,
+  }
+  // Check if user exists and password is correct
+  return done(null, user);
+});
+
+interface User {
+  id: string;
+  name: string;
+  email: string;
+}
+
+interface Account {
+  accountId: string;
+  name: string;
+  members: string[];
+}
+
+// dummy code
+function getAccount(user: User): Account {
+  return {
+    accountId: "accountId",
+    name: "accountName",
+    members: [user.id]
+  };
+}
+
+// dummy code
+function getDeviceId(_: User) {
+  return "deviceId";
+}
+
+dotenv.config({path: path.join(__dirname, "/../.env")});
 
 export class Server {
   private app: Express;
@@ -15,76 +75,84 @@ export class Server {
     this.app = app;
 
     const config = {
-      apiKeySecret: process.env.API_KEY,
-      apiUrl: process.env.API_URL,
+      apiKey: process.env.API_KEY,
+      apiUrl: process.env.API_URL
     };
-    this.client = createClient(config);
 
+    this.client = new Client(new HttpClientNode(5000), config);
+
+    this.client.getApiKeyDetails().then((details) => {
+      console.log(`ApiKey details: ${details.requestId}, ${details.callsRemaining}, ${details.success}`)
+    })
+
+    app.use(express.static(path.join(__dirname, "/../frontend")));
     app.use(bodyParser.json());
-    app.use(function (req, res, next) {
-      res.header("Access-Control-Allow-Origin", "*");
-      res.header(
-        "Access-Control-Allow-Headers",
-        "Origin, X-Requested-With, Content-Type, Accept"
-      );
-      next();
-    });
+
+    app.use(session({secret: 'journy'}));
+    app.use(passport.initialize());
+    app.use(passport.session());
+
+    app.use(express.static('../frontend'))
 
     this.app.post(
-      "/pet-information",
-      cors(),
-      async (req: Request, res: Response): Promise<void> => {
-        const {
-          email,
-          petName,
-          petSpecies,
-          petToys,
-          petDate,
-          petInsured,
-        } = req.body;
+      "/login",
+      passport.authenticate('local', {failureRedirect: '/'}),
+      async (request: Request, response: Response) => {
+        const user: User = <User>request.user;
+        const account: Account = getAccount(<User>request.user);
 
-        let response;
-        response = await this.client.trackEvent({
-          email: email,
-          tag: "pet-information",
-          campaign: "pets",
-          source: "demo-application",
-        });
-        if (!response.success) {
-          res.status(500).send({
-            message:
-              "There went something wrong submitting your information. Please try again later.",
+        if (account) {
+          // If user is linked to account
+          await this.client.upsertAppAccount({
+            accountId: account.accountId,
+            name: account.name,
+            memberIds: account.members
           });
-          return;
         }
-        response = await this.client.trackProperties({
-          email: email,
-          properties: {
-            petName: petName,
-            petSpecies: petSpecies,
-            petToys: petToys,
-            petDate: petDate,
-            petInsured: petInsured,
-          },
-        });
-        if (!response.success) {
-          res.status(500).send({
-            message:
-              "There went something wrong submitting your information. Please try again later.",
-          });
-          return;
+        const deviceId = getDeviceId(<User>request.user);
+        if (deviceId) {
+          // If the deviceId is known, link it to the userId so more precise tracking can be done
+          await this.client.link({userId: user.id, deviceId: deviceId});
         }
 
-        res
-          .status(201)
-          .send({ message: "The information is correctly stored." });
+        // Upsert the App user
+        await this.client.upsertAppUser({userId: user.id, email: user.email});
+
+        response.status(200).send({message: "Logged in."})
       }
     );
+
+    this.app.post(
+      "/create-invoice",
+      passport.authenticate('local', {failureRedirect: '/'}),
+      async (request: Request, response: Response) => {
+        const user: User = <User>request.user;
+        const account: Account = getAccount(<User>request.user);
+
+        if (account) {
+          // If user is linked to an account, the event should be added for the user in an account
+          await this.client.addEvent(AppEvent.forUserInAccount("create-invoice", user.id, account.accountId));
+        }
+        // Store the event for the user
+        await this.client.addEvent(AppEvent.forUser("create-invoice", user.id));
+
+        response.status(201).send({message: "Invoice created."})
+      }
+    );
+
+    this.app.use(passport.authenticate('local', {failureRedirect: '/'}),
+      (request: Request, response: Response) => {
+        readFile(path.join(__dirname, "/../frontend/index.html"), (error, contents) => {
+          if (error) throw error;
+
+          response.send(contents);
+        });
+      });
   }
 
   public start(port: number): void {
     this.app.listen(port, () =>
-      console.log(`Server listening on port ${port}!`)
+      console.log(`🚀 Server listening on http://localhost:${port}!`)
     );
   }
 }
