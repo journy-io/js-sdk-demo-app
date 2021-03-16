@@ -1,101 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Journy.io Node.js SDK demo - Log In</title>
-    <meta charset="utf-8" />
-    <link href="includes/css/bootstrap.min.css" rel="stylesheet" />
-    <script src="includes/js/jquery.min.js"></script>
-    <script src="includes/js/bootstrap.min.js"></script>
-  </head>
-  <body>
-    <div class="container my-5 col-12">
-      <div class="my-2" id="form-required" hidden>
-        <div class="alert alert-danger" role="alert">
-          All fields are required. Please fill them in correctly.
-        </div>
-      </div>
-      <div class="my-2" id="form-error" hidden>
-        <div class="alert alert-warning" role="alert">
-          There went something wrong while talking to the server. Please try
-          again later.
-        </div>
-      </div>
-      <div class="card p-5">
-        <div class="card-title text-center">
-          <h1>Journy.io's invoice application</h1>
-        </div>
-        <form class="col-12">
-          <div class="form-group">
-            <label for="email">Email address</label>
-            <input
-              class="form-control"
-              id="email"
-              placeholder="name@example.com"
-              type="email"
-              required
-            />
-          </div>
-          <div class="form-group">
-            <label for="password">Password</label>
-            <input
-              class="form-control"
-              id="password"
-              placeholder="Password"
-              type="password"
-              required
-            />
-          </div>
-          <div class="text-right">
-            <button class="btn btn-primary" id="login-form" type="submit">
-              Log in
-            </button>
-          </div>
-        </form>
+
+<head>
+  <title>Journy.io Node.js SDK demo - Log In</title>
+  <meta charset="utf-8" />
+  <link href="includes/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="includes/js/jquery.min.js"></script>
+  <script src="includes/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div class="container my-5 col-12">
+    <div class="my-2" id="form-required" hidden>
+      <div class="alert alert-danger" role="alert">
+        All fields are required. Please fill them in correctly.
       </div>
     </div>
-    <script>
-      const required = $("#form-required");
-      const error = $("#form-error");
+    <div class="my-2" id="form-error" hidden>
+      <div class="alert alert-warning" role="alert">
+        There went something wrong while talking to the server. Please try
+        again later.
+      </div>
+    </div>
+    <div class="card p-5">
+      <div class="card-title text-center">
+        <h1>Journy.io's invoice application</h1>
+      </div>
+      <form class="col-12">
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input class="form-control" id="email" placeholder="name@example.com" type="email" required />
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input class="form-control" id="password" placeholder="Password" type="password" required />
+        </div>
+        <div class="text-right">
+          <button class="btn btn-primary" id="login-form" type="submit">
+            Log in
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script>
+    const required = $("#form-required");
+    const error = $("#form-error");
 
-      $("#login-form").click((event) => {
-        event.preventDefault();
-        required.attr("hidden", true);
-        error.attr("hidden", true);
+    $("#login-form").click((event) => {
+      event.preventDefault();
+      required.attr("hidden", true);
+      error.attr("hidden", true);
 
-        const postData = {
-          username: $("#email").val(),
-          password: $("#password").val(),
-        };
+      const postData = {
+        username: $("#email").val(),
+        password: $("#password").val(),
+      };
 
-        if (!isValidForm(postData)) {
-          required.attr("hidden", false);
-          return;
-        }
-
-        $.ajax({
-          type: "POST",
-          url: "http://localhost:3001/login", // TODO
-          data: JSON.stringify(postData),
-          success: () => {
-            window.location.href = "/invoice.html";
-          },
-          error: (err) => {
-            if (err.status >= 300) {
-              error.attr("hidden", false);
-            }
-          },
-          contentType: "application/json",
-        });
-      });
-
-      function isValidForm(data) {
-        return (
-          data.username &&
-          data.username.trim().length > 0 &&
-          data.password &&
-          data.password.trim().length > 0
-        );
+      if (!isValidForm(postData)) {
+        required.attr("hidden", false);
+        return;
       }
-    </script>
-  </body>
+
+      $.ajax({
+        type: "POST",
+        url: "http://localhost:3001/login", // TODO
+        data: JSON.stringify(postData),
+        success: () => {
+          window.location.href = "/invoice.html";
+        },
+        error: (err) => {
+          if (err.status >= 300) {
+            error.attr("hidden", false);
+          }
+        },
+        contentType: "application/json",
+      });
+    });
+
+    function isValidForm(data) {
+      return (
+        data.username &&
+        data.username.trim().length > 0 &&
+        data.password &&
+        data.password.trim().length > 0
+      );
+    }
+
+  </script>
+</body>
+
 </html>
