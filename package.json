@@ -1,32 +1,16 @@
 {
-  "name": "js-sdk-demo-app",
-  "version": "1.0.0",
-  "description": "A demo application for the journyio Node.js SDK",
-  "repository": "git@github.com:journy-io/js-sdk-demo-app.git",
-  "main": "index.ts",
-  "author": "Journy.io",
-  "engines": {
-    "node": "12.16.2"
-  },
-  "license": "MIT",
-  "dependencies": {
-    "@journyio/sdk": "2.0.1",
-    "@types/express": "4.17.7",
-    "@types/passport": "^1.0.5",
-    "axios": "^0.20.0",
-    "cors": "2.8.5",
-    "dotenv": "^8.2.0",
-    "express": "4.17.1",
-    "express-session": "^1.17.1",
-    "morgan": "^1.10.0",
-    "passport": "^0.4.1",
-    "passport-local": "^1.0.0",
-    "typescript": "4.0.2"
-  },
+  "name": "journy-demo-v3",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "start": "npx ts-node index.ts"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
   },
-  "devDependencies": {
-    "prettier": "2.1.1"
+  "dependencies": {
+    "bootstrap": "^4.6.0",
+    "next": "10.0.9",
+    "react": "17.0.1",
+    "react-dom": "17.0.1"
   }
 }

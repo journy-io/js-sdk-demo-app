@@ -19,7 +19,7 @@ $ cp .env-example .env
 ### Start application
 
 ```sh
-$ npm run start
+$ npm run dev
 ```
 
-### Visit [http://localhost:3001](http://localhost:3001)! 🚀
+### Visit [http://localhost:3001](http://localhost:3000)! 🚀
