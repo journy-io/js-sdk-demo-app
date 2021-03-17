@@ -2,13 +2,7 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import { server } from "../config";
 
-export default function AddInvoice({ business, invoiceSent, setInvoiceSent }) {
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   setInvoiceSent(true);
-  //   document.getElementById("invoice-form").reset();
-  // };
-
+export default function AddInvoice({ account, invoiceSent, setInvoiceSent }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -31,7 +25,7 @@ export default function AddInvoice({ business, invoiceSent, setInvoiceSent }) {
   return (
     <div>
       <div className="container my-5 col-12">
-        <p className="font-weight-bold text-center">{business}</p>
+        <p className="font-weight-bold text-center">{account.name}</p>
 
         {invoiceSent ? (
           <div className="my-2" id="form-submitted">

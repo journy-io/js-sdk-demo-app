@@ -2,37 +2,33 @@
   {
     "id": "1",
     "name": "Test Account 1",
-    "email": "test1@account.com",
-    "businesses": [
-      { "id": "2", "name": "Business 1" },
-      { "id": "3", "name": "Business 2" }
+    "users": [
+      { "id": "1", "role": "Admin" },
+      { "id": "2", "role": "Admin" }
     ]
   },
   {
     "id": "2",
     "name": "Test Account 2",
-    "email": "test2@account.com",
-    "businesses": [
-      { "id": "3", "name": "Business 1" },
-      { "id": "4", "name": "Business 2" }
+    "users": [
+      { "id": "3", "role": "Admin" },
+      { "id": "4", "role": "Admin" }
     ]
   },
   {
     "id": "3",
     "name": "Test Account 3",
-    "email": "test3@account.com",
-    "businesses": [
-      { "id": "5", "name": "Business 1" },
-      { "id": "6", "name": "Business 2" }
+    "users": [
+      { "id": "1", "role": "Admin" },
+      { "id": "2", "role": "Admin" }
     ]
   },
   {
     "id": "4",
     "name": "Test Account 4",
-    "email": "test4@account.com",
-    "businesses": [
-      { "id": "7", "name": "Business 1" },
-      { "id": "2", "name": "Business 2" }
+    "users": [
+      { "id": "3", "role": "Admin" },
+      { "id": "4", "role": "Admin" }
     ]
   }
 ]

@@ -10,7 +10,7 @@ This demo application shows you how you can use our [Node.js SDK](https://github
 $ npm install
 ```
 
-### Copy the `.env-example` file and paste your API key generated via [app.journy.io](https://app.journy.io/?utm_source=github&utm_content=readme-js-demo-app)
+### Copy the `.env-example` file and paste your API key generated via [system.journy.io](https://system.journy.io/?utm_source=github&utm_content=readme-js-demo-app)
 
 ```sh
 $ cp .env-example .env
@@ -22,4 +22,4 @@ $ cp .env-example .env
 $ npm run dev
 ```
 
-### Visit [http://localhost:3001](http://localhost:3000)! 🚀
+### Visit [http://localhost:3000](http://localhost:3000)! 🚀

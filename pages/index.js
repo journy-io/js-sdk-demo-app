@@ -19,7 +19,7 @@ export default function Home() {
       });
 
       await res.json().then((res) => {
-        Router.push(`account/${res.id}`);
+        Router.push(`users/${res.id}`);
       });
     } catch (err) {
       setError(true);

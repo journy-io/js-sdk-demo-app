@@ -1,14 +1,11 @@
-import accounts from "../../accounts.json";
-export default async (req, res) => {
+import users from "../../users.json";
+export default (req, res) => {
   const { email } = req.body;
-  try {
-    await accounts.map((account) => {
-      if (account.email === email) {
-        res.json(account);
-      }
-    });
-  } catch (err) {
-    res.status(500).send();
-    res.end();
+  const user = users.find((user) => {
+    return user.email === email;
+  });
+  if (!user) {
+    return res.status(404).send();
   }
+  return res.json(user);
 };
