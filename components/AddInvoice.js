@@ -1,11 +1,31 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
+import { server } from "../config";
 
 export default function AddInvoice({ business, invoiceSent, setInvoiceSent }) {
-  const handleSubmit = (e) => {
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   setInvoiceSent(true);
+  //   document.getElementById("invoice-form").reset();
+  // };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setInvoiceSent(true);
-    document.getElementById("invoice-form").reset();
+    try {
+      await fetch(`${server}/api/add-invoice`, {
+        body: JSON.stringify({
+          email: e.target.email.value,
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+        method: "POST",
+      });
+      setInvoiceSent(true);
+      document.getElementById("invoice-form").reset();
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (
