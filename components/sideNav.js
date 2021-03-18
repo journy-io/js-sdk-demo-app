@@ -1,22 +1,24 @@
-import React from "react";
-import accounts from "../accounts.json";
+import React, { useEffect } from "react";
 import ActiveLink from "./ActiveLink";
+import { server } from "../config";
 
-function SideNav({ user }) {
+function SideNav() {
   const [userAccounts, setAccounts] = React.useState([]);
-  React.useEffect(() => {
+
+  useEffect(() => {
     getAccounts();
-  }, [user]);
-  const getAccounts = () => {
-    let accountArray = [];
-    for (let i = 0; i < accounts.length; i++) {
-      for (let k = 0; k < accounts[i].users.length; k++) {
-        if (user && accounts[i].users[k].id === user.id) {
-          accountArray.push(accounts[i]);
-        }
-      }
-    }
-    setAccounts(accountArray);
+  }, []);
+
+  const getAccounts = async () => {
+    await fetch(`${server}/api/user-accounts`)
+      .then((res) => {
+        res.json().then((data) => {
+          return setAccounts(data.userAccounts);
+        });
+      })
+      .catch((er) => {
+        console.log(er);
+      });
   };
 
   return (

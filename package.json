@@ -1,6 +1,8 @@
 {
-  "name": "journy-demo-v3",
-  "version": "0.1.0",
+  "name": "js-sdk-demo-app",
+  "version": "1.0.0",
+  "description": "A demo application for the journyio Node.js SDK",
+  "author": "Journy.io",
   "private": true,
   "scripts": {
     "dev": "next dev",

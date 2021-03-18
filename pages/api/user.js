@@ -1,14 +1,8 @@
-import { withIronSession } from "next-iron-session";
+import getSession from "../../util/getSession";
 
-function handler(req, res, session) {
+function handler(req, res) {
   const user = req.session.get("user");
   res.send({ user });
 }
 
-export default withIronSession(handler, {
-  password: "complex_password_at_least_32_characters_long",
-  cookieName: "MYSITECOOKIE",
-  cookieOptions: {
-    secure: process.env.NODE_ENV === "production",
-  },
-});
+export default getSession(handler);

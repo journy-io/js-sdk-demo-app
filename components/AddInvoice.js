@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import { server } from "../config";
 
 export default function AddInvoice({ account }) {
-  const [invoiceSent, setInvoiceSent] = React.useState(false);
-  React.useEffect(() => {
+  const [invoiceSent, setInvoiceSent] = useState(false);
+  const formRef = useRef();
+
+  useEffect(() => {
     clearForm();
   });
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -27,7 +30,7 @@ export default function AddInvoice({ account }) {
   };
 
   const clearForm = () => {
-    document.getElementById("invoice-form").reset();
+    formRef.current.reset();
   };
 
   return (
@@ -48,6 +51,7 @@ export default function AddInvoice({ account }) {
             <h1>Journy.io's invoice application</h1>
           </div>
           <form
+            ref={formRef}
             id="invoice-form"
             className="col-12"
             onSubmit={(e) => handleSubmit(e)}
