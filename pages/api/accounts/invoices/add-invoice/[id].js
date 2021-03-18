@@ -1,4 +1,5 @@
 import accounts from "../../../../../accounts.json";
+
 export default function handler({ query: { id } }, res) {
   const account = accounts.find((account) => {
     return account.id === id;

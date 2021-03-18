@@ -1,12 +1,9 @@
 import getSession from "../../util/getSession";
-import accounts from "../../accounts.json";
+import {getUserAccounts} from "../../util/getUserAccounts";
 
 function handler(req, res) {
   const loggedInUser = req.session.get("user");
-  const userAccounts = accounts.filter(
-    (account) =>
-      account.users.find((user) => user.id === loggedInUser.id) !== undefined
-  );
+  const userAccounts = getUserAccounts(loggedInUser)
   res.send({ userAccounts });
 }
 

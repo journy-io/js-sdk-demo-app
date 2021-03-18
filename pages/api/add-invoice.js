@@ -1,11 +1,12 @@
 import { Event } from "@journyio/sdk";
 import { client } from '../../util/journyConfig'
+import getSession from "../../util/getSession";
 
-export default async (req, res) => {
-  try {
-    await client.addEvent(Event.forUser("create-invoice", "test"));
-    res.status(200).send();
-  } catch (err) {
-    res.status(500).send();
-  }
-};
+
+async function handler(req, res) {
+  const user = req.session.get("user");
+  client.addEvent(Event.forUser("create-invoice", user.id));
+
+return user
+}
+export default getSession(handler);
