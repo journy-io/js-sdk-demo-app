@@ -48,7 +48,7 @@ export default function AddInvoice({ account }) {
 
         <div className="card p-5">
           <div className="card-title text-center">
-            <h1>Journy.io's invoice application</h1>
+            <h1>Journy.io's Invoice Application</h1>
           </div>
           <form
             ref={formRef}

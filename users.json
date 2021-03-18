@@ -18,5 +18,41 @@
     "id": "4",
     "name": "User 4",
     "email": "test4@account.com"
+  },
+  {
+    "id": "5",
+    "name": "Paul Mcartney",
+    "email": "paul@beatles.com"
+  },
+  {
+    "id": "6",
+    "name": "Ringo Star",
+    "email": "ringo@beatles.com"
+  },
+  {
+    "id": "7",
+    "name": "Yoko Ono",
+    "email": "yoko@yokoband.com"
+  },
+  {
+    "id": "8",
+    "name": "Brian Jones",
+    "email": "brian@rollingstones.com"
+  },
+  {
+    "id": "9",
+    "name": "Mick Jager",
+    "email": "mick@rollingstones.com"
+  },
+  
+  {
+    "id": "9",
+    "name": "Keith Richards",
+    "email": "keith@rollingstones.com"
+  },
+  {
+    "id": "10",
+    "name": "John lennon",
+    "email": "john@beatles.com"
   }
 ]
