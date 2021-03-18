@@ -22,7 +22,7 @@ function SideNav() {
   };
 
   return (
-    <div className="sidenav">
+    <div className="sidenav"> 
       {userAccounts.map((account) => {
         return (
           <ActiveLink
@@ -31,6 +31,7 @@ function SideNav() {
             href={`/accounts/invoices/add-invoice/${account.id}`}
           >
             <a>{account.name}</a>
+            
           </ActiveLink>
         );
       })}

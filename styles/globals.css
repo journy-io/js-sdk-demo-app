@@ -23,7 +23,7 @@ hr {
 
 .sidenav {
   height: 100%;
-  width: 160px;
+  width: 180px;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -36,7 +36,7 @@ hr {
 .sidenav a {
   padding: 6px 8px 6px 16px;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 23px;
   color: #948282 ;
   display: block;
   cursor:pointer;
@@ -47,8 +47,8 @@ hr {
 }
 
 .container {
-  margin-left: 150px !important;
-  padding-right: 160px !important;
+  margin-left: 180px !important;
+  padding-right: 195px !important;
 }
 
 .nav {

@@ -37,7 +37,6 @@ export default function AddInvoice({ account }) {
     <div>
       <div className="container my-5 col-12">
         <p className="font-weight-bold text-center">{account.name}</p>
-
         {invoiceSent ? (
           <div className="my-2" id="form-submitted">
             <div className="alert alert-success" role="alert">

@@ -1,58 +1,69 @@
 [
   {
     "id": "1",
-    "name": "User 1",
+    "first_name": "User 1",
+    "last_name": "test-user",
     "email": "test1@account.com"
   },
   {
     "id": "2",
-    "name": "User 2",
+    "first_name": "User 2",
+    "last_name": "test-user",
     "email": "test2@account.com"
   },
   {
     "id": "3",
-    "name": "User 3",
+    "first_name": "User 3",
+    "last_name": "test-user",
     "email": "test3@account.com"
   },
   {
     "id": "4",
-    "name": "User 4",
+    "first_name": "User 4",
+    "last_name": "test-user",
     "email": "test4@account.com"
   },
   {
     "id": "5",
-    "name": "Paul Mcartney",
+    "first_name": "Paul",
+    "last_name":"Mcartney",
     "email": "paul@beatles.com"
   },
   {
     "id": "6",
-    "name": "Ringo Star",
+    "first_name": "Ringo",
+    "last_name":"Star",
     "email": "ringo@beatles.com"
   },
   {
     "id": "7",
-    "name": "Yoko Ono",
+    "first_name": "Yoko",
+    "last_name":"Ono",
     "email": "yoko@yokoband.com"
   },
   {
     "id": "8",
-    "name": "Brian Jones",
+    "first_name": "Brian",
+    "last_name":"Jones",
     "email": "brian@rollingstones.com"
   },
   {
     "id": "9",
-    "name": "Mick Jager",
+    "first_name": "Mick",
+    "last_name":"Jager",
     "email": "mick@rollingstones.com"
   },
   
   {
     "id": "9",
-    "name": "Keith Richards",
+    "first_name": "Keith",
+    "last_name":"Richards",
     "email": "keith@rollingstones.com"
   },
   {
     "id": "10",
-    "name": "John lennon",
+    "first_name": "John",
+    "last_name":"Lennon",
     "email": "john@beatles.com"
   }
 ]

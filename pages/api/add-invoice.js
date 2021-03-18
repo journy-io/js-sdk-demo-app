@@ -1,12 +1,5 @@
-import { Client, Event } from "@journyio/sdk";
-import { HttpClientNode } from "@journyio/http";
-
-const config = {
-  apiKey: process.env.API_KEY,
-  rootUrl: process.env.API_URL,
-};
-
-const client = new Client(new HttpClientNode(5000), config);
+import { Event } from "@journyio/sdk";
+import { client } from '../../util/journyConfig'
 
 export default async (req, res) => {
   try {
