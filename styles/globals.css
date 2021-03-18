@@ -11,6 +11,12 @@ a {
   text-decoration: none;
 }
 
+hr {
+  display: block; height: 1px !important;
+    border: 0; border-top: 1px solid #ccc;
+    margin: 1em 0; padding: 0;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -27,12 +33,18 @@ a {
   padding-top: 20px;
 }
 
-.sidenav p {
+.sidenav a {
   padding: 6px 8px 6px 16px;
   text-decoration: none;
   font-size: 25px;
-  color: #cec8c8;
+  color: #948282 !important;
   display: block;
+
+}
+
+.active {
+  color:purple !important;
+
 }
 
 .container {

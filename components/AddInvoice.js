@@ -2,7 +2,11 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import { server } from "../config";
 
-export default function AddInvoice({ account, invoiceSent, setInvoiceSent }) {
+export default function AddInvoice({ account }) {
+  const [invoiceSent, setInvoiceSent] = React.useState(false);
+  React.useEffect(() => {
+    clearForm();
+  });
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -16,10 +20,14 @@ export default function AddInvoice({ account, invoiceSent, setInvoiceSent }) {
         method: "POST",
       });
       setInvoiceSent(true);
-      document.getElementById("invoice-form").reset();
+      clearForm();
     } catch (err) {
       console.log(err);
     }
+  };
+
+  const clearForm = () => {
+    document.getElementById("invoice-form").reset();
   };
 
   return (

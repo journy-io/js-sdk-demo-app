@@ -19,7 +19,7 @@ export default function Home() {
       });
 
       await res.json().then((res) => {
-        Router.push(`users/${res.id}`);
+        Router.push(`accounts/invoices/add-invoice/1`);
       });
     } catch (err) {
       setError(true);
