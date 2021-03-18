@@ -1,7 +1,7 @@
 import React from "react";
 import { server } from "../config";
-import Navbar from "./navbar";
-import SideNav from "./sideNav";
+import Navbar from "./Navbar";
+import SideNav from "./SideNav";
 
 export default function Layout({ children }) {
   const [user, setUser] = React.useState({});

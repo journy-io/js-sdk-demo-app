@@ -1,6 +1,6 @@
 import AddInvoice from "../../../../components/AddInvoice";
 import { server } from "../../../../config";
-import Layout from "../../../../components/layout";
+import Layout from "../../../../components/Layout";
 import React from "react";
 
 export default function Account({ account }) {

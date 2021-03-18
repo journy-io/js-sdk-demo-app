@@ -1,7 +1,6 @@
 import React from "react";
-import Link from "next/link";
 import accounts from "../accounts.json";
-import { useRouter, withRouter } from "next/router";
+import ActiveLink from "./ActiveLink";
 
 function SideNav({ user }) {
   const [userAccounts, setAccounts] = React.useState([]);
@@ -24,16 +23,17 @@ function SideNav({ user }) {
     <div className="sidenav">
       {userAccounts.map((account) => {
         return (
-          <Link
+          <ActiveLink
+            activeClassName="active"
             key={account.id}
             href={`/accounts/invoices/add-invoice/${account.id}`}
           >
-            {account.name}
-          </Link>
+            <a>{account.name}</a>
+          </ActiveLink>
         );
       })}
     </div>
   );
 }
 
-export default withRouter(SideNav);
+export default SideNav;

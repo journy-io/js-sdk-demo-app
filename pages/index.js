@@ -1,6 +1,6 @@
+import React from "react";
 import { server } from "../config";
 import "bootstrap/dist/css/bootstrap.css";
-import React from "react";
 import Router from "next/router";
 
 export default function Home() {
