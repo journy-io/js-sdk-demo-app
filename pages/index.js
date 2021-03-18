@@ -18,8 +18,17 @@ export default function Home() {
         method: "POST",
       });
 
-      await res.json().then((res) => {
-        Router.push(`accounts/invoices/add-invoice/1`);
+      await res.json().then(() => {
+        fetch(`${server}/api/user-accounts`)
+          .then((res) => {
+            res.json().then((data) => {
+              const inititalAccount = data.userAccounts[0].id;
+              Router.push(`accounts/invoices/add-invoice/${inititalAccount}`);
+            });
+          })
+          .catch((er) => {
+            console.log(er);
+          });
       });
     } catch (err) {
       setError(true);
