@@ -7,12 +7,6 @@ const config = {
 };
 
 const client = new Client(new HttpClientNode(5000), config);
-client.getApiKeyDetails().then((details) => {
-  console.log(
-    details,
-    `ApiKey details: ${details.requestId}, ${details.callsRemaining}, ${details.success}`
-  );
-});
 
 export default async (req, res) => {
   try {
@@ -20,6 +14,5 @@ export default async (req, res) => {
     res.status(200).send();
   } catch (err) {
     res.status(500).send();
-    res.end();
   }
 };
