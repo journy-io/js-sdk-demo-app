@@ -48,7 +48,10 @@ function SideNav() {
                   <h6>-Team Members-</h6>
                   {accountUsers.map((user) => {
                     return (
-                      <p style={{ color: "white", fontSize: "10" }}>
+                      <p
+                        key={user.id}
+                        style={{ color: "white", fontSize: "10" }}
+                      >
                         {user.first_name}
                       </p>
                     );

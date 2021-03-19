@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { server } from "../config";
 import "bootstrap/dist/css/bootstrap.css";
 import Router from "next/router";
 
 export default function Home() {
-  const [error, setError] = React.useState(false);
+  const [error, setError] = useState(false);
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     try {

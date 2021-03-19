@@ -16,6 +16,6 @@ export const addAccounts = (account) => {
     properties: {
       registered_at: new Date(),
     },
-    members: account.users.map((user) => user.id),
+    memberIds: account.users.map((user) => user.id),
   });
 };

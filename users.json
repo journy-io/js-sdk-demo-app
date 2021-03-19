@@ -53,7 +53,7 @@
     "last_name":"Jager",
     "email": "mick@rollingstones.com"
   },
-  
+
   {
     "id": "9",
     "first_name": "Keith",
@@ -65,5 +65,11 @@
     "first_name": "John",
     "last_name":"Lennon",
     "email": "john@beatles.com"
+  },
+  {
+    "id": "11",
+    "first_name": "George",
+    "last_name":"Harrison",
+    "email": "george@beatles.com"
   }
 ]

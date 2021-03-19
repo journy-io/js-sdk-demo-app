@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { server } from "../config";
 import Navbar from "./Navbar";
 import SideNav from "./SideNav";
 
 export default function Layout({ children }) {
-  const [user, setUser] = React.useState({});
-  React.useEffect(() => {
+  const [user, setUser] = useState({});
+  useEffect(() => {
     getUser();
   }, []);
   const getUser = async () => {

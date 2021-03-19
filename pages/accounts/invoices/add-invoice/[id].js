@@ -4,10 +4,6 @@ import Layout from "../../../../components/Layout";
 import React from "react";
 
 export default function Account({ account }) {
-  React.useEffect(() => {
-    console.log(account);
-  });
-
   return (
     <Layout>
       <AddInvoice account={account}></AddInvoice>

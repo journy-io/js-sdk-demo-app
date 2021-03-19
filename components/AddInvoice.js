@@ -15,8 +15,10 @@ export default function AddInvoice({ account }) {
     try {
       await fetch(`${server}/api/add-invoice`, {
         body: JSON.stringify({
-          email: e.target.email.value,
+          client_email: e.target.email.value,
           accountId: account.id,
+          invoice_price: e.target.price.value,
+          services: e.target.services.value,
         }),
         headers: {
           "Content-Type": "application/json",

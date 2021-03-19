@@ -27,7 +27,8 @@
     "users": [
       { "id": "10", "role": "Admin" },
       { "id": "5", "role": "Admin" },
-      { "id": "6", "role": "Admin" }
+      { "id": "6", "role": "Admin" },
+      { "id": "11", "role": "Admin" }
     ]
   },
   {
