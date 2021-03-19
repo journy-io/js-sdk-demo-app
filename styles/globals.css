@@ -33,17 +33,33 @@ hr {
   padding-top: 20px;
 }
 
-.sidenav a {
+.sidenav h4{
+  text-align:center;
+  color:#394CD3
+}
+
+
+
+.sidenav div {
   padding: 6px 8px 6px 16px;
   text-decoration: none;
-  font-size: 23px;
+  font-size: 20px;
   color: #948282 ;
   display: block;
   cursor:pointer;
+
+}
+.sidenav p{
+  font-size:12px;
+  color:rgb(207, 200, 200) !important
+}
+.sidenav h6{
+  color:#f3f1ef;
+  margin-left:-5px
 }
 
 .active {
-  color:purple !important;
+  color:#949FE6 !important;
 }
 
 .container {

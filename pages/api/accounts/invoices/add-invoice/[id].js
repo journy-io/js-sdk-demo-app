@@ -7,5 +7,5 @@ export default function handler({ query: { id } }, res) {
   if (!account) {
     return res.status(404).send();
   }
-  return res.json(account);
+  res.json(account);
 }

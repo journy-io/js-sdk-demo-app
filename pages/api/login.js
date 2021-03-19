@@ -1,6 +1,6 @@
 import users from "../../users.json";
 import getSession from "../../util/getSession";
-import { client } from '../../util/journyConfig'
+import { client } from "../../util/journyConfig";
 import { Event } from "@journyio/sdk";
 
 import { getUserAccounts } from "../../util/getUserAccounts";
@@ -17,10 +17,8 @@ async function handler(req, res) {
   await req.session.save();
 
   if (user) {
-
     //Add User to journy.io
     await client.upsertUser({
-
       userId: user.id,
       email: user.email,
 
@@ -31,11 +29,10 @@ async function handler(req, res) {
       },
     });
 
-
     //Add user accounts to journy.io
-    const userAccounts = await getUserAccounts(user)
+    const userAccounts = getUserAccounts(user);
     for (const account of userAccounts) {
-      await addAccounts(account);
+      addAccounts(account);
     }
 
     //Trigger login event on journy
@@ -48,7 +45,3 @@ async function handler(req, res) {
 }
 
 export default getSession(handler);
-
-
-
-
