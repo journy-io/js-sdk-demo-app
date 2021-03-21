@@ -1,8 +1,9 @@
 {
   "name": "js-sdk-demo-app",
   "version": "1.0.0",
-  "description": "A demo application for the journyio Node.js SDK",
-  "author": "Journy.io",
+  "description": "Demo application showcasing how to use journy.io's Node.js SDK",
+  "author": "journy.io",
+  "license": "MIT",
   "private": true,
   "scripts": {
     "dev": "next dev",
