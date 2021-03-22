@@ -1,6 +1,5 @@
 {
-    "prettier.arrowParens": "avoid",
-    "beautify.config": "",
-    "editor.formatOnSave": true
-    
+  "prettier.arrowParens": "avoid",
+  "beautify.config": "",
+  "editor.formatOnSave": true
 }

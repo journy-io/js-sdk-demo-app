@@ -10,8 +10,7 @@
   {
     "id": "2",
     "name": "Test Account 2",
-    "users": [
-      { "id": "3", "role": "Admin" }    ]
+    "users": [{ "id": "3", "role": "Admin" }]
   },
   {
     "id": "3",
@@ -42,9 +41,7 @@
   {
     "id": "6",
     "name": "Wings",
-    "users": [
-      { "id": "5", "role": "Admin" }
-    ]
+    "users": [{ "id": "5", "role": "Admin" }]
   },
   {
     "id": "7",
@@ -57,17 +54,16 @@
   {
     "id": "8",
     "name": "The New Barbarians",
-    "users": [
-      { "id": "9", "role": "Admin" }
-    ]
+    "users": [{ "id": "9", "role": "Admin" }]
   },
 
-  {"id": "9",
-  "name": "Plastic Ono Band",
-  "users": [
-    { "id": "10", "role": "Admin" },
-    { "id": "6", "role": "Admin" },
-    { "id": "7", "role": "Admin" }
-  ]
-}
+  {
+    "id": "9",
+    "name": "Plastic Ono Band",
+    "users": [
+      { "id": "10", "role": "Admin" },
+      { "id": "6", "role": "Admin" },
+      { "id": "7", "role": "Admin" }
+    ]
+  }
 ]

@@ -10,25 +10,20 @@ function SideNav({ user }) {
   const router = useRouter();
 
   useEffect(() => {
-    getAccounts();
+    getAccounts().finally(() => {});
   }, []);
 
+  const accountId = router.asPath.slice(-1);
+
   useEffect(() => {
-    const accountId = router.asPath.slice(-1);
     const users = getAccountUsers(accountId);
     setAccountUsers(users);
-  }, [router.asPath]);
+  }, [accountId]);
 
   const getAccounts = async () => {
-    await fetch(`${server}/api/user-accounts`)
-      .then((res) => {
-        res.json().then((data) => {
-          return setAccounts(data.userAccounts);
-        });
-      })
-      .catch((er) => {
-        console.log(er);
-      });
+    const response = await fetch(`${server}/api/user-accounts`);
+    const data = await response.json();
+    setAccounts(data.userAccounts);
   };
 
   const handleAccountSwitch = async (accountId) => {

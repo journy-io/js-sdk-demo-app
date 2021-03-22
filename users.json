@@ -3,73 +3,85 @@
     "id": "1",
     "first_name": "User 1",
     "last_name": "test-user",
-    "email": "test1@account.com"
+    "email": "test1@account.com",
+    "registered_at": "2021-03-22T17:31:10.488Z"
   },
   {
     "id": "2",
     "first_name": "User 2",
     "last_name": "test-user",
-    "email": "test2@account.com"
+    "email": "test2@account.com",
+    "registered_at": "2021-03-21T17:31:10.488Z"
   },
   {
     "id": "3",
     "first_name": "User 3",
     "last_name": "test-user",
-    "email": "test3@account.com"
+    "email": "test3@account.com",
+    "registered_at": "2021-03-20T17:31:10.488Z"
   },
   {
     "id": "4",
     "first_name": "User 4",
     "last_name": "test-user",
-    "email": "test4@account.com"
+    "email": "test4@account.com",
+    "registered_at": "2021-03-20T17:31:10.488Z"
   },
   {
     "id": "5",
     "first_name": "Paul",
-    "last_name":"Mcartney",
-    "email": "paul@beatles.com"
+    "last_name": "Mcartney",
+    "email": "paul@beatles.com",
+    "registered_at": "2021-03-20T17:31:10.488Z"
   },
   {
     "id": "6",
     "first_name": "Ringo",
-    "last_name":"Star",
-    "email": "ringo@beatles.com"
+    "last_name": "Star",
+    "email": "ringo@beatles.com",
+    "registered_at": "2021-03-20T17:31:10.488Z"
   },
   {
     "id": "7",
     "first_name": "Yoko",
-    "last_name":"Ono",
-    "email": "yoko@yokoband.com"
+    "last_name": "Ono",
+    "email": "yoko@yokoband.com",
+    "registered_at": "2021-03-20T17:31:10.488Z"
   },
   {
     "id": "8",
     "first_name": "Brian",
-    "last_name":"Jones",
-    "email": "brian@rollingstones.com"
+    "last_name": "Jones",
+    "email": "brian@rollingstones.com",
+    "registered_at": "2021-03-20T17:31:10.488Z"
   },
   {
     "id": "9",
     "first_name": "Mick",
-    "last_name":"Jager",
-    "email": "mick@rollingstones.com"
+    "last_name": "Jager",
+    "email": "mick@rollingstones.com",
+    "registered_at": "2021-03-20T17:31:10.488Z"
   },
 
   {
     "id": "9",
     "first_name": "Keith",
-    "last_name":"Richards",
-    "email": "keith@rollingstones.com"
+    "last_name": "Richards",
+    "email": "keith@rollingstones.com",
+    "registered_at": "2021-03-20T17:31:10.488Z"
   },
   {
     "id": "10",
     "first_name": "John",
-    "last_name":"Lennon",
-    "email": "john@beatles.com"
+    "last_name": "Lennon",
+    "email": "john@beatles.com",
+    "registered_at": "2021-03-20T17:31:10.488Z"
   },
   {
     "id": "11",
     "first_name": "George",
-    "last_name":"Harrison",
-    "email": "george@beatles.com"
+    "last_name": "Harrison",
+    "email": "george@beatles.com",
+    "registered_at": "2021-03-20T17:31:10.488Z"
   }
 ]

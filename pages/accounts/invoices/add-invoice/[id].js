@@ -6,7 +6,7 @@ import React from "react";
 export default function Account({ account }) {
   return (
     <Layout>
-      <AddInvoice account={account}></AddInvoice>
+      <AddInvoice account={account} />
     </Layout>
   );
 }
@@ -26,7 +26,9 @@ export const getStaticProps = async ({ params }) => {
   const res = await fetch(
     `${server}/api/accounts/invoices/add-invoice/${params.id}`
   );
+
   const account = await res.json();
+
   return {
     props: {
       account,

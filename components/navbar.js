@@ -11,6 +11,7 @@ export default function Navbar({ user }) {
         console.log(er);
       });
   };
+
   return (
     <nav className="nav navbar navbar-expand-lg navbar-light bg-light">
       <div className="nav-content">

@@ -1,8 +1,9 @@
 import getSession from "../../util/getSession";
 
-function handler(req, res) {
-  const user = req.session.get("user");
-  res.send({ user });
+function handler(request, response) {
+  const user = request.session.get("user");
+
+  response.send({ user });
 }
 
 export default getSession(handler);

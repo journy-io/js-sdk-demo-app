@@ -10,9 +10,9 @@ export default function Home() {
   const [userAccounts, setUserAccounts] = useState([]);
   const [loggedInUser, setLoggedInUser] = useState("");
 
-  //Handle user login and fetch user accounts
   const handleFormSubmit = async (e) => {
     e.preventDefault();
+
     try {
       const res = await fetch(`${server}/api/login-user`, {
         body: JSON.stringify({
@@ -23,6 +23,7 @@ export default function Home() {
         },
         method: "POST",
       });
+
       await res.json().then((user) => {
         fetch(`${server}/api/user-accounts`)
           .then((result) => {
@@ -41,11 +42,9 @@ export default function Home() {
     }
   };
 
-  //Handle account login and reroute to account page
-
   const loginAccount = async (accountId) => {
     try {
-      const res = await fetch(`${server}/api/login-account`, {
+      await fetch(`${server}/api/login-account`, {
         body: JSON.stringify({
           accountId,
           userId: loggedInUser.id,
@@ -55,7 +54,6 @@ export default function Home() {
         },
         method: "POST",
       });
-      await res.json();
       await setShowModal(false);
       await Router.push(`accounts/invoices/add-invoice/${accountId}`);
     } catch (err) {
@@ -71,8 +69,6 @@ export default function Home() {
         userAccounts={userAccounts}
         loginAccount={loginAccount}
       />
-      <title>Journy.io Node.js SDK demo - Log In</title>
-
       <div className="container my-5 col-12">
         <div className="card p-5">
           <div className="card-title text-center">
@@ -107,7 +103,7 @@ export default function Home() {
               </button>
             </div>
           </form>
-          {error ? <p className="error-message">Email is not correct</p> : null}
+          {error ? <p className="error-message">Unknown user</p> : null}
         </div>
       </div>
     </div>

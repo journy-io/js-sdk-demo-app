@@ -2,11 +2,11 @@ import { Event } from "@journyio/sdk";
 import { client } from "../../util/journyConfig";
 import getSession from "../../util/getSession";
 
-async function handler(req, res) {
-  const { client_email, accountId, invoice_price, services } = req.body;
-  const user = req.session.get("user");
-  //Trigger event in journy
-  client.addEvent(
+async function handler(request, response) {
+  const { client_email, accountId, invoice_price, services } = request.body;
+  const user = request.session.get("user");
+
+  await client.addEvent(
     Event.forUserInAccount("create-invoice", user.id, accountId).withMetadata({
       client_email,
       invoice_price,
@@ -14,6 +14,7 @@ async function handler(req, res) {
     })
   );
 
-  res.send(200);
+  response.send(200);
 }
+
 export default getSession(handler);

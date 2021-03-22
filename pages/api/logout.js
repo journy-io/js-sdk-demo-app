@@ -1,8 +1,8 @@
 import getSession from "../../util/getSession";
 
-function handler(req, res) {
-    req.session.destroy();
-    res.send("Logged out");
-  }
+function handler(req, response) {
+  req.session.destroy();
+  response.send();
+}
 
-  export default getSession(handler);
+export default getSession(handler);

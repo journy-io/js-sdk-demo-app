@@ -5,9 +5,11 @@ import SideNav from "./SideNav";
 
 export default function Layout({ children }) {
   const [user, setUser] = useState({});
+
   useEffect(() => {
     getUser();
   }, []);
+
   const getUser = async () => {
     await fetch(`${server}/api/user`)
       .then((res) => {
@@ -19,12 +21,12 @@ export default function Layout({ children }) {
         console.log(er);
       });
   };
+
   return (
     <>
       {user ? (
         <div>
           <Navbar user={user} />
-
           {children}
           <SideNav user={user} />
         </div>

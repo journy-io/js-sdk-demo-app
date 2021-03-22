@@ -1,10 +1,13 @@
 import users from "../../../users.json";
-export default function handler({ query: { id } }, res) {
+
+export default function handler({ query: { id } }, response) {
   const user = users.find((user) => {
     return user.id === id;
   });
+
   if (!user) {
-    return res.status(404).send();
+    return response.status(404).send();
   }
-  return res.json(user);
+
+  return response.json(user);
 }
