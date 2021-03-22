@@ -26,7 +26,7 @@ export default function Layout({ children }) {
           <Navbar user={user} />
 
           {children}
-          <SideNav />
+          <SideNav user={user} />
         </div>
       ) : (
         <p>loading</p>
