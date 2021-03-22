@@ -12,6 +12,7 @@ function SideNav() {
   useEffect(() => {
     getAccounts();
   }, []);
+
   useEffect(() => {
     const accountId = router.asPath.slice(-1);
     const users = getAccountUsers(accountId);
@@ -30,6 +31,23 @@ function SideNav() {
       });
   };
 
+  const handleAccountSwitch = async (accountId) => {
+    try {
+      const res = await fetch(`${server}/api/login-account`, {
+        body: JSON.stringify({
+          accountId,
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+        method: "POST",
+      });
+      await res.json();
+      await setShowModal(false);
+      await Router.push(`accounts/invoices/add-invoice/${accountId}`);
+    } catch (err) {}
+  };
+
   return (
     <div className="sidenav">
       <h4>Your Accounts</h4>
@@ -41,7 +59,9 @@ function SideNav() {
             href={`/accounts/invoices/add-invoice/${account.id}`}
           >
             <div className="accounts">
-              <a>{account.name}</a>
+              <a onClick={() => handleAccountSwitch(account.id)}>
+                {account.name}
+              </a>
               {router.asPath ===
               `/accounts/invoices/add-invoice/${account.id}` ? (
                 <div>

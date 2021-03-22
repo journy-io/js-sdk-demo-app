@@ -2,13 +2,19 @@ import React, { useState } from "react";
 import { server } from "../config";
 import "bootstrap/dist/css/bootstrap.css";
 import Router from "next/router";
+import ChooseAccount from "../components/ChooseAccount";
 
 export default function Home() {
   const [error, setError] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [userAccounts, setUserAccounts] = useState([]);
+  const [initialAccount, setInitialAccount] = useState({});
+
+  //Handle user login and fetch user accounts
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch(`${server}/api/login`, {
+      const res = await fetch(`${server}/api/login-user`, {
         body: JSON.stringify({
           email: e.target.email.value,
         }),
@@ -17,13 +23,12 @@ export default function Home() {
         },
         method: "POST",
       });
-
       await res.json().then(() => {
         fetch(`${server}/api/user-accounts`)
           .then((res) => {
             res.json().then((data) => {
-              const inititalAccount = data.userAccounts[0].id;
-              Router.push(`accounts/invoices/add-invoice/${inititalAccount}`);
+              setShowModal(true);
+              setUserAccounts(data.userAccounts);
             });
           })
           .catch((er) => {
@@ -34,8 +39,37 @@ export default function Home() {
       setError(true);
     }
   };
+
+  //Handle account login and reroute to account page
+
+  const loginAccount = async (accountId) => {
+    try {
+      const res = await fetch(`${server}/api/login-account`, {
+        body: JSON.stringify({
+          accountId,
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+        method: "POST",
+      });
+      await res.json();
+      await setShowModal(false);
+      await Router.push(`accounts/invoices/add-invoice/${accountId}`);
+    } catch (err) {
+      setError(true);
+    }
+  };
+
   return (
     <div>
+      <ChooseAccount
+        showModal={showModal}
+        setShowModal={setShowModal}
+        userAccounts={userAccounts}
+        setInitialAccount={setInitialAccount}
+        loginAccount={loginAccount}
+      />
       <title>Journy.io Node.js SDK demo - Log In</title>
 
       <div className="container my-5 col-12">

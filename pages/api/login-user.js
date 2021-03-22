@@ -2,13 +2,11 @@ import users from "../../users.json";
 import getSession from "../../util/getSession";
 import { client } from "../../util/journyConfig";
 import { Event } from "@journyio/sdk";
-
 import { getUserAccounts } from "../../util/getUserAccounts";
 import { addAccounts } from "../../util/journyConfig";
 
 async function handler(req, res) {
   const { email } = req.body;
-
   const user = users.find((user) => {
     return user.email === email;
   });
@@ -35,8 +33,8 @@ async function handler(req, res) {
       addAccounts(account);
     }
 
-    //Trigger login event on journy
-    await client.addEvent(Event.forUser("login", user.id));
+    //Trigger login event for user on journy
+    await client.addEvent(Event.forUser("user_login", user.id));
 
     res.json(user);
   } else {
