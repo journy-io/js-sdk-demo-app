@@ -4,7 +4,7 @@ import ActiveLink from "./ActiveLink";
 import getAccountUsers from "../util/getAccountUsers";
 import { useRouter } from "next/router";
 
-function SideNav() {
+function SideNav({ user }) {
   const [userAccounts, setAccounts] = useState([]);
   const [accountUsers, setAccountUsers] = useState([]);
   const router = useRouter();
@@ -36,6 +36,7 @@ function SideNav() {
       const res = await fetch(`${server}/api/login-account`, {
         body: JSON.stringify({
           accountId,
+          userId: user.id,
         }),
         headers: {
           "Content-Type": "application/json",
@@ -45,7 +46,9 @@ function SideNav() {
       await res.json();
       await setShowModal(false);
       await Router.push(`accounts/invoices/add-invoice/${accountId}`);
-    } catch (err) {}
+    } catch (er) {
+      console.log(er);
+    }
   };
 
   return (

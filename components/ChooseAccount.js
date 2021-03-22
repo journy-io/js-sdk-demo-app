@@ -22,7 +22,7 @@ const ChooseAccount = ({
         <Modal.Body>
           {userAccounts.map((account) => {
             return (
-              <Button onClick={() => loginAccount(account.id)}>
+              <Button key={account.id} onClick={() => loginAccount(account.id)}>
                 {account.name}
               </Button>
             );

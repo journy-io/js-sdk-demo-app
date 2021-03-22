@@ -8,7 +8,7 @@ export default function Home() {
   const [error, setError] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [userAccounts, setUserAccounts] = useState([]);
-  const [initialAccount, setInitialAccount] = useState({});
+  const [loggedInUser, setLoggedInUser] = useState("");
 
   //Handle user login and fetch user accounts
   const handleFormSubmit = async (e) => {
@@ -23,10 +23,11 @@ export default function Home() {
         },
         method: "POST",
       });
-      await res.json().then(() => {
+      await res.json().then((user) => {
         fetch(`${server}/api/user-accounts`)
-          .then((res) => {
-            res.json().then((data) => {
+          .then((result) => {
+            result.json().then((data) => {
+              setLoggedInUser(user);
               setShowModal(true);
               setUserAccounts(data.userAccounts);
             });
@@ -47,6 +48,7 @@ export default function Home() {
       const res = await fetch(`${server}/api/login-account`, {
         body: JSON.stringify({
           accountId,
+          userId: loggedInUser.id,
         }),
         headers: {
           "Content-Type": "application/json",
@@ -67,7 +69,6 @@ export default function Home() {
         showModal={showModal}
         setShowModal={setShowModal}
         userAccounts={userAccounts}
-        setInitialAccount={setInitialAccount}
         loginAccount={loginAccount}
       />
       <title>Journy.io Node.js SDK demo - Log In</title>
