@@ -1,0 +1,59 @@
+[
+  {
+    "id": "5",
+    "first_name": "Paul",
+    "last_name": "Mcartney",
+    "email": "paul@beatles.com",
+    "registered_at": "2021-03-20T17:31:10.488Z"
+  },
+  {
+    "id": "6",
+    "first_name": "Ringo",
+    "last_name": "Star",
+    "email": "ringo@beatles.com",
+    "registered_at": "2021-03-20T17:31:10.488Z"
+  },
+  {
+    "id": "7",
+    "first_name": "Yoko",
+    "last_name": "Ono",
+    "email": "yoko@yokoband.com",
+    "registered_at": "2021-03-20T17:31:10.488Z"
+  },
+  {
+    "id": "8",
+    "first_name": "Brian",
+    "last_name": "Jones",
+    "email": "brian@rollingstones.com",
+    "registered_at": "2021-03-20T17:31:10.488Z"
+  },
+  {
+    "id": "9",
+    "first_name": "Mick",
+    "last_name": "Jager",
+    "email": "mick@rollingstones.com",
+    "registered_at": "2021-03-20T17:31:10.488Z"
+  },
+
+  {
+    "id": "10",
+    "first_name": "Keith",
+    "last_name": "Richards",
+    "email": "keith@rollingstones.com",
+    "registered_at": "2021-03-20T17:31:10.488Z"
+  },
+  {
+    "id": "11",
+    "first_name": "John",
+    "last_name": "Lennon",
+    "email": "john@beatles.com",
+    "registered_at": "2021-03-20T17:31:10.488Z"
+  },
+  {
+    "id": "12",
+    "first_name": "George",
+    "last_name": "Harrison",
+    "email": "george@beatles.com",
+    "registered_at": "2021-03-20T17:31:10.488Z"
+  }
+]
