@@ -1,15 +1,11 @@
-import Router from "next/router";
-import { server } from "../config";
+import { useRouter } from "next/router";
 
 export default function Navbar({ user }) {
+  const router = useRouter();
+
   const handleLogout = async () => {
-    await fetch(`${server}/api/logout`)
-      .then(() => {
-        Router.push("/");
-      })
-      .catch((er) => {
-        console.log(er);
-      });
+    await fetch("/api/logout");
+    router.push("/");
   };
 
   return (
@@ -18,7 +14,7 @@ export default function Navbar({ user }) {
         <p>
           {user.first_name} {user.last_name}
         </p>
-        <div className="avatar"></div>
+        <div className="avatar" />
         <button onClick={handleLogout} className="btn btn-warning">
           Logout
         </button>

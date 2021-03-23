@@ -58,7 +58,11 @@ hr {
   margin-left: -5px;
 }
 
-.active {
+.sidenav button {
+  color: #fff;
+}
+
+.active button {
   color: #949fe6 !important;
 }
 

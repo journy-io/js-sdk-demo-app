@@ -1,7 +1,7 @@
 import AddInvoice from "../../../../components/AddInvoice";
-import { server } from "../../../../config";
 import Layout from "../../../../components/Layout";
 import React from "react";
+import accounts from "../../../../data/accounts.json";
 
 export default function Account({ account }) {
   return (
@@ -11,23 +11,8 @@ export default function Account({ account }) {
   );
 }
 
-export const getStaticPaths = async () => {
-  const res = await fetch(`${server}/api/accounts`);
-
-  const accounts = await res.json();
-  const paths = accounts.map((account) => ({
-    params: { id: account.id.toString() },
-  }));
-
-  return { paths, fallback: false };
-};
-
-export const getStaticProps = async ({ params }) => {
-  const res = await fetch(
-    `${server}/api/accounts/invoices/add-invoice/${params.id}`
-  );
-
-  const account = await res.json();
+export const getServerSideProps = async ({ params }) => {
+  const account = accounts.find((account) => account.id === params.id);
 
   return {
     props: {

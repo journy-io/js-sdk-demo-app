@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.css";
-import { server } from "../config";
 
 export default function AddInvoice({ account }) {
   const [invoiceSent, setInvoiceSent] = useState(false);
@@ -12,24 +11,20 @@ export default function AddInvoice({ account }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      await fetch(`${server}/api/add-invoice`, {
-        body: JSON.stringify({
-          client_email: e.target.email.value,
-          accountId: account.id,
-          invoice_price: e.target.price.value,
-          services: e.target.services.value,
-        }),
-        headers: {
-          "Content-Type": "application/json",
-        },
-        method: "POST",
-      });
-      setInvoiceSent(true);
-      clearForm();
-    } catch (err) {
-      console.log(err);
-    }
+    await fetch(`/api/add-invoice`, {
+      body: JSON.stringify({
+        client_email: e.target.email.value,
+        accountId: account.id,
+        invoice_price: e.target.price.value,
+        services: e.target.services.value,
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "POST",
+    });
+    setInvoiceSent(true);
+    clearForm();
   };
 
   const clearForm = () => {

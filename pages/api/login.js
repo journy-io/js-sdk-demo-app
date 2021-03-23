@@ -1,9 +1,8 @@
 import users from "../../data/users.json";
 import getSession from "../../util/getSession";
-import { client } from "../../util/journyConfig";
+import { client } from "../../util/journy";
 import { Event } from "@journyio/sdk";
-import { getUserAccounts } from "../../util/getUserAccounts";
-import { addAccounts } from "../../util/journyConfig";
+import accounts from "../../data/accounts.json";
 
 async function handler(request, response) {
   const { email } = request.body;
@@ -12,7 +11,7 @@ async function handler(request, response) {
   });
 
   if (!user) {
-    return response.sendStatus(401);
+    return response.status(401).send();
   }
 
   request.session.set("user", user);
@@ -28,14 +27,22 @@ async function handler(request, response) {
     },
   });
 
-  const userAccounts = getUserAccounts(user);
-  for (const account of userAccounts) {
-    await addAccounts(account);
+  for (const account of accounts.filter((account) =>
+    account.users.find((member) => member.id === user.id)
+  )) {
+    await client.upsertAccount({
+      accountId: account.id,
+      name: account.name,
+      properties: {
+        registered_at: new Date(),
+      },
+      memberIds: account.users.map((user) => user.id),
+    });
   }
 
   await client.addEvent(Event.forUser("user_login", user.id));
 
-  response.json(user);
+  return response.json(user);
 }
 
 export default getSession(handler);

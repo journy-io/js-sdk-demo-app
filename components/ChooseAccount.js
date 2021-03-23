@@ -2,12 +2,12 @@ import React from "react";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 
-const ChooseAccount = ({
+export default function ChooseAccount({
   showModal,
   setShowModal,
-  userAccounts,
-  loginAccount,
-}) => {
+  accounts,
+  onSwitchAccount,
+}) {
   return (
     <>
       <Modal
@@ -17,21 +17,22 @@ const ChooseAccount = ({
         keyboard={false}
       >
         <Modal.Header closeButton>
-          <Modal.Title>Please Select an Account</Modal.Title>
+          <Modal.Title>Please select an account</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          {userAccounts.map((account) => {
+          {accounts.map((account) => {
             return (
-              <Button key={account.id} onClick={() => loginAccount(account.id)}>
+              <Button
+                key={account.id}
+                onClick={() => onSwitchAccount(account.id)}
+              >
                 {account.name}
               </Button>
             );
           })}
         </Modal.Body>
-        <Modal.Footer></Modal.Footer>
+        <Modal.Footer />
       </Modal>
     </>
   );
-};
-
-export default ChooseAccount;
+}

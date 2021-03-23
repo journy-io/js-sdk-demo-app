@@ -1,64 +1,51 @@
 import React, { useState } from "react";
-import { server } from "../config";
 import "bootstrap/dist/css/bootstrap.css";
-import Router from "next/router";
+import { useRouter } from "next/router";
 import ChooseAccount from "../components/ChooseAccount";
 
 export default function Home() {
   const [error, setError] = useState(false);
   const [showModal, setShowModal] = useState(false);
-  const [userAccounts, setUserAccounts] = useState([]);
-  const [loggedInUser, setLoggedInUser] = useState("");
+  const [accounts, setAccounts] = useState([]);
+  const router = useRouter();
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
 
+    let user;
     try {
-      const res = await fetch(`${server}/api/login-user`, {
-        body: JSON.stringify({
-          email: e.target.email.value,
-        }),
-        headers: {
-          "Content-Type": "application/json",
-        },
-        method: "POST",
-      });
-
-      await res.json().then((user) => {
-        fetch(`${server}/api/user-accounts`)
-          .then((result) => {
-            result.json().then((data) => {
-              setLoggedInUser(user);
-              setShowModal(true);
-              setUserAccounts(data.userAccounts);
-            });
-          })
-          .catch((er) => {
-            console.log(er);
-          });
-      });
-    } catch (err) {
+      user = await (
+        await fetch("/api/login", {
+          body: JSON.stringify({
+            email: e.target.email.value,
+          }),
+          headers: {
+            "Content-Type": "application/json",
+          },
+          method: "POST",
+        })
+      ).json();
+    } catch (error) {
       setError(true);
     }
+
+    const accounts = await (await fetch("/api/user/accounts")).json();
+    setShowModal(true);
+    setAccounts(accounts);
   };
 
-  const loginAccount = async (accountId) => {
-    try {
-      await fetch(`${server}/api/login-account`, {
-        body: JSON.stringify({
-          accountId,
-          userId: loggedInUser.id,
-        }),
-        headers: {
-          "Content-Type": "application/json",
-        },
-        method: "POST",
-      });
-      await setShowModal(false);
-      await Router.push(`accounts/invoices/add-invoice/${accountId}`);
-    } catch (err) {
-      setError(true);
-    }
+  const onSwitchAccount = async (accountId) => {
+    await fetch("/api/switch-account", {
+      body: JSON.stringify({
+        accountId,
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "POST",
+    });
+    setShowModal(false);
+    router.push(`/accounts/invoices/add-invoice/${accountId}`);
   };
 
   return (
@@ -66,8 +53,8 @@ export default function Home() {
       <ChooseAccount
         showModal={showModal}
         setShowModal={setShowModal}
-        userAccounts={userAccounts}
-        loginAccount={loginAccount}
+        accounts={accounts}
+        onSwitchAccount={onSwitchAccount}
       />
       <div className="container my-5 col-12">
         <div className="card p-5">

@@ -1,26 +1,5 @@
 [
   {
-    "id": "1",
-    "name": "Test Account 1",
-    "users": [
-      { "id": "1", "role": "Admin" },
-      { "id": "2", "role": "Admin" }
-    ]
-  },
-  {
-    "id": "2",
-    "name": "Test Account 2",
-    "users": [{ "id": "3", "role": "Admin" }]
-  },
-  {
-    "id": "3",
-    "name": "Test Account 3",
-    "users": [
-      { "id": "1", "role": "Admin" },
-      { "id": "2", "role": "Admin" }
-    ]
-  },
-  {
     "id": "4",
     "name": "The Beatles",
     "users": [

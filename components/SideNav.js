@@ -1,55 +1,37 @@
 import React, { useState, useEffect } from "react";
-import { server } from "../config";
 import ActiveLink from "./ActiveLink";
-import getAccountUsers from "../util/getAccountUsers";
 import { useRouter } from "next/router";
 
 function SideNav({ user }) {
-  const [userAccounts, setAccounts] = useState([]);
-  const [accountUsers, setAccountUsers] = useState([]);
+  const [accounts, setAccounts] = useState([]);
   const router = useRouter();
 
   useEffect(() => {
     getAccounts().finally(() => {});
   }, []);
 
-  const accountId = router.asPath.slice(-1);
-
-  useEffect(() => {
-    const users = getAccountUsers(accountId);
-    setAccountUsers(users);
-  }, [accountId]);
-
   const getAccounts = async () => {
-    const response = await fetch(`${server}/api/user-accounts`);
-    const data = await response.json();
-    setAccounts(data.userAccounts);
+    const accounts = await (await fetch("/api/user/accounts")).json();
+    setAccounts(accounts);
   };
 
   const handleAccountSwitch = async (accountId) => {
-    try {
-      const res = await fetch(`${server}/api/login-account`, {
-        body: JSON.stringify({
-          accountId,
-          userId: user.id,
-        }),
-        headers: {
-          "Content-Type": "application/json",
-        },
-        method: "POST",
-      });
-      await res.json();
-      await setShowModal(false);
-      await Router.push(`accounts/invoices/add-invoice/${accountId}`);
-    } catch (er) {
-      console.log(er);
-    }
+    await fetch("/api/switch-account", {
+      body: JSON.stringify({
+        accountId,
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "POST",
+    });
+    router.push(`/accounts/invoices/add-invoice/${accountId}`);
   };
 
   return (
     <div className="sidenav">
       <h4>Your Accounts</h4>
-      {userAccounts.map((account) => {
+      {accounts.map((account) => {
         return (
           <ActiveLink
             activeClassName="active"
@@ -57,14 +39,18 @@ function SideNav({ user }) {
             href={`/accounts/invoices/add-invoice/${account.id}`}
           >
             <div className="accounts">
-              <a onClick={() => handleAccountSwitch(account.id)}>
+              <button
+                type="button"
+                style={{ border: "none", background: "none", padding: 0 }}
+                onClick={() => handleAccountSwitch(account.id)}
+              >
                 {account.name}
-              </a>
+              </button>
               {router.asPath ===
               `/accounts/invoices/add-invoice/${account.id}` ? (
                 <div>
                   <h6>-Team Members-</h6>
-                  {accountUsers.map((user) => {
+                  {account.users.map((user) => {
                     return (
                       <p
                         key={user.id}
