@@ -58,13 +58,13 @@ export default function Home() {
         onSwitchAccount={onSwitchAccount}
       />
       <div className=" my-5 col-12  text-center">
-      <div  className="logo">
-      <Image
-        src='/logo.png'
-        width={300}
-        height={80}
-      />
-         </div>
+        <div  className="logo">
+          <Image
+            src='/logo.png'
+            width={300}
+            height={80}
+          />
+        </div>
         <div className="card p-5">
 
           <div className="card-title text-center ">
