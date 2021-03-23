@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import { useRouter } from "next/router";
 import ChooseAccount from "../components/ChooseAccount";
+import Image from 'next/image'
 
 export default function Home() {
   const [error, setError] = useState(false);
@@ -49,17 +50,26 @@ export default function Home() {
   };
 
   return (
-    <div>
+    <>
       <ChooseAccount
         showModal={showModal}
         setShowModal={setShowModal}
         accounts={accounts}
         onSwitchAccount={onSwitchAccount}
       />
-      <div className="container my-5 col-12">
+      <div className=" my-5 col-12  text-center">
+      <div  className="logo">
+      <Image
+        src='/logo.png'
+        width={300}
+        height={80}
+         />
+         </div>
         <div className="card p-5">
-          <div className="card-title text-center">
-            <h1>Journy.io's invoice application</h1>
+
+          <div className="card-title text-center ">
+
+            <h1>Journy.io's Accounting for Cool Bands Demo App</h1>
           </div>
           <form className="col-12" onSubmit={handleFormSubmit}>
             <div className="form-group">
@@ -93,6 +103,6 @@ export default function Home() {
           {error ? <p className="error-message">Unknown user</p> : null}
         </div>
       </div>
-    </div>
+    </>
   );
 }
