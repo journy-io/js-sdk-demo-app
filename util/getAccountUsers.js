@@ -1,5 +1,5 @@
-import users from "../users.json";
-import accounts from "../accounts.json";
+import users from "../data/users.json";
+import accounts from "../data/accounts.json";
 
 export default function getUserAccounts(accountId) {
   const account = accounts.find((account) => account.id === accountId);

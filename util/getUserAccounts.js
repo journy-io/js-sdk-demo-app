@@ -1,4 +1,4 @@
-import accounts from "../accounts.json";
+import accounts from "../data/accounts.json";
 
 export const getUserAccounts = (loggedInUser) => {
   return accounts.filter(

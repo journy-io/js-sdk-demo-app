@@ -1,4 +1,4 @@
-import users from "../../../users.json";
+import users from "../../../data/users.json";
 
 export default function handler({ query: { id } }, response) {
   const user = users.find((user) => {

@@ -1,4 +1,4 @@
-import users from "../../users.json";
+import users from "../../data/users.json";
 import getSession from "../../util/getSession";
 import { client } from "../../util/journyConfig";
 import { Event } from "@journyio/sdk";

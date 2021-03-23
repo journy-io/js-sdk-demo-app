@@ -1,4 +1,4 @@
-import accounts from "../../accounts.json";
+import accounts from "../../data/accounts.json";
 import { client } from "../../util/journyConfig";
 import { Event } from "@journyio/sdk";
 

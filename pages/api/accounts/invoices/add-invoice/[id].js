@@ -1,4 +1,4 @@
-import accounts from "../../../../../accounts.json";
+import accounts from "../../../../../data/accounts.json";
 
 export default function handler({ query: { id } }, response) {
   const account = accounts.find((account) => {
