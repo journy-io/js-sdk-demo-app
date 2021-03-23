@@ -63,7 +63,7 @@ export default function Home() {
         src='/logo.png'
         width={300}
         height={80}
-         />
+      />
          </div>
         <div className="card p-5">
 
