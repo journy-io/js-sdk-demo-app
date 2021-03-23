@@ -61,8 +61,8 @@ export default function Home() {
         <div  className="logo">
           <Image
             src='/logo.png'
-            width={300}
-            height={80}
+            width={500}
+            height={87}
           />
         </div>
         <div className="card p-5">
