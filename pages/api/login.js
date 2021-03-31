@@ -16,10 +16,11 @@ async function handler(request, response) {
 
   request.session.set("user", user);
   await request.session.save();
+  console.log(user);
 
   await client.upsertUser({
-    userId: String(user.id),
-    email: String(user.email),
+    userId: user.id,
+    email: user.email,
     properties: {
       first_name: user.first_name,
       last_name: user.last_name,
