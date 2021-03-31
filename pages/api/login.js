@@ -16,7 +16,6 @@ async function handler(request, response) {
 
   request.session.set("user", user);
   await request.session.save();
-  console.log(user);
 
   await client.upsertUser({
     userId: user.id,
