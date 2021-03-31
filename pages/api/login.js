@@ -1,7 +1,7 @@
 import users from "../../data/users.json";
 import getSession from "../../util/getSession";
 import { client } from "../../util/journy";
-import { Event } from "@journyio/sdk";
+import { Event, UserIdentified } from "@journyio/sdk";
 import accounts from "../../data/accounts.json";
 
 async function handler(request, response) {
@@ -32,15 +32,18 @@ async function handler(request, response) {
   )) {
     await client.upsertAccount({
       accountId: account.id,
-      name: account.name,
       properties: {
         registered_at: new Date(),
       },
-      memberIds: account.users.map((user) => user.id),
+      members: account.users.map((user) => {
+        return { user: user.id };
+      }),
     });
   }
 
-  await client.addEvent(Event.forUser("user_login", user.id));
+  await client.addEvent(
+    Event.forUser("user_login", UserIdentified.byUserId(user.id))
+  );
 
   return response.json(user);
 }

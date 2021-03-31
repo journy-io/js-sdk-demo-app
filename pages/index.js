@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import { useRouter } from "next/router";
 import ChooseAccount from "../components/ChooseAccount";
-import Image from 'next/image'
+import Image from "next/image";
 
 export default function Home() {
   const [error, setError] = useState(false);
@@ -58,17 +58,11 @@ export default function Home() {
         onSwitchAccount={onSwitchAccount}
       />
       <div className=" my-5 col-12  text-center">
-        <div  className="logo">
-          <Image
-            src='/logo.png'
-            width={500}
-            height={87}
-          />
+        <div className="logo">
+          <Image src="/logo.png" width={500} height={87} />
         </div>
         <div className="card p-5">
-
           <div className="card-title text-center ">
-
             <h1>Journy.io's Accounting for Cool Bands Demo App</h1>
           </div>
           <form className="col-12" onSubmit={handleFormSubmit}>
