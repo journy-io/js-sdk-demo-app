@@ -6,8 +6,6 @@ async function handler(request, response) {
   const { client_email, accountId, invoice_price, services } = request.body;
   const user = request.session.get("user");
 
-  UserIdentified.byUserId(user.id), AccountIdentified.byAccountId(accountId);
-
   await client.addEvent(
     Event.forUserInAccount(
       "create-invoice",

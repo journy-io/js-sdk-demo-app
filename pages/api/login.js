@@ -18,8 +18,8 @@ async function handler(request, response) {
   await request.session.save();
 
   await client.upsertUser({
-    userId: user.id,
-    email: user.email,
+    userId: String(user.id),
+    email: String(user.email),
     properties: {
       first_name: user.first_name,
       last_name: user.last_name,
@@ -33,10 +33,11 @@ async function handler(request, response) {
     await client.upsertAccount({
       accountId: account.id,
       properties: {
+        name: account.name,
         registered_at: new Date(),
       },
       members: account.users.map((user) => {
-        return { user: user.id };
+        return { userId: user.id };
       }),
     });
   }
