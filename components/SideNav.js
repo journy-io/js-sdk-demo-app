@@ -15,17 +15,19 @@ function SideNav({ user }) {
     setAccounts(accounts);
   };
 
-  const handleAccountSwitch = async (accountId) => {
+  const handleAccountSwitch = async (newAccountId) => {
+    const oldAccountId = router.asPath.slice(-1);
     await fetch("/api/switch-account", {
       body: JSON.stringify({
-        accountId,
+        newAccountId,
+        oldAccountId,
       }),
       headers: {
         "Content-Type": "application/json",
       },
       method: "POST",
     });
-    router.push(`/accounts/invoices/add-invoice/${accountId}`);
+    router.push(`/accounts/invoices/add-invoice/${newAccountId}`);
   };
 
   return (

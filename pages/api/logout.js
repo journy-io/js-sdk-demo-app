@@ -1,6 +1,18 @@
+import { client } from "../../util/journy";
+import { Event, UserIdentified, AccountIdentified } from "@journyio/sdk";
 import getSession from "../../util/getSession";
 
-function handler(req, response) {
+async function handler(req, response) {
+  const { userId, accountId } = req.body;
+
+  await client.addEvent(
+    Event.forAccount("account_logout", AccountIdentified.byAccountId(accountId))
+  );
+
+  await client.addEvent(
+    Event.forUser("user_logout", UserIdentified.byUserId(userId))
+  );
+
   req.session.destroy();
 
   return response.send();

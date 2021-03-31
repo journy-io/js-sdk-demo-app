@@ -2,9 +2,17 @@ import { useRouter } from "next/router";
 
 export default function Navbar({ user }) {
   const router = useRouter();
-
   const handleLogout = async () => {
-    await fetch("/api/logout");
+    await fetch("/api/logout", {
+      body: JSON.stringify({
+        userId: user.id,
+        accountId: router.asPath.slice(-1),
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "POST",
+    });
     router.push("/");
   };
 
