@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Navbar from "./Navbar";
 import SideNav from "./SideNav";
 
-export default function Layout({ children }) {
+export default function Layout({ children, account }) {
   const [user, setUser] = useState({});
 
   useEffect(() => {
@@ -18,9 +18,9 @@ export default function Layout({ children }) {
     <>
       {user ? (
         <div>
-          <Navbar user={user} />
+          <Navbar user={user} account={account} />
           {children}
-          <SideNav user={user} />
+          <SideNav user={user} account={account} />
         </div>
       ) : (
         <p>loading</p>

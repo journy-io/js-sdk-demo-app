@@ -13,19 +13,16 @@ export default function Home() {
   const handleFormSubmit = async (e) => {
     e.preventDefault();
 
-    let user;
     try {
-      user = await (
-        await fetch("/api/login", {
-          body: JSON.stringify({
-            email: e.target.email.value,
-          }),
-          headers: {
-            "Content-Type": "application/json",
-          },
-          method: "POST",
-        })
-      ).json();
+      await fetch("/api/login", {
+        body: JSON.stringify({
+          email: e.target.email.value,
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+        method: "POST",
+      });
     } catch (error) {
       setError(true);
     }
@@ -38,7 +35,8 @@ export default function Home() {
   const onSwitchAccount = async (accountId) => {
     await fetch("/api/switch-account", {
       body: JSON.stringify({
-        accountId,
+        newAccountId: accountId,
+        oldAccountId: undefined,
       }),
       headers: {
         "Content-Type": "application/json",

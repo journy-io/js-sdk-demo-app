@@ -61,7 +61,7 @@ export default function AddInvoice({ account }) {
                 id="email"
                 placeholder="name@example.com"
                 type="email"
-                required
+                required={true}
               />
             </div>
             <div className="form-group">
@@ -72,7 +72,7 @@ export default function AddInvoice({ account }) {
                 id="services"
                 placeholder="Services"
                 required
-              ></textarea>
+              />
             </div>
             <div className="form-group">
               <label htmlFor="email">Invoice price</label>

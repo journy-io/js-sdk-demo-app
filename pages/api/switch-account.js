@@ -6,20 +6,24 @@ async function handler(request, response) {
   const { newAccountId, oldAccountId } = request.body;
   const user = request.session.get("user");
 
-  await client.addEvent(
-    Event.forAccount(
-      "account_logout",
-      AccountIdentified.byAccountId(oldAccountId)
-    )
-  );
+  if (oldAccountId) {
+    await client.addEvent(
+      Event.forUserInAccount(
+        "account_logout",
+        UserIdentified.byUserId(user.id),
+        AccountIdentified.byAccountId(oldAccountId)
+      )
+    );
+  }
 
   await client.addEvent(
     Event.forUser("user_switched_accounts", UserIdentified.byUserId(user.id))
   );
 
   await client.addEvent(
-    Event.forAccount(
+    Event.forUserInAccount(
       "account_login",
+      UserIdentified.byUserId(user.id),
       AccountIdentified.byAccountId(newAccountId)
     )
   );

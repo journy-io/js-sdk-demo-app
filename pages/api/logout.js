@@ -6,7 +6,11 @@ async function handler(req, response) {
   const { userId, accountId } = req.body;
 
   await client.addEvent(
-    Event.forAccount("account_logout", AccountIdentified.byAccountId(accountId))
+    Event.forUserInAccount(
+      "account_logout",
+      UserIdentified.byUserId(userId),
+      AccountIdentified.byAccountId(accountId)
+    )
   );
 
   await client.addEvent(

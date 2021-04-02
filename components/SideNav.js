@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import ActiveLink from "./ActiveLink";
 import { useRouter } from "next/router";
 
-function SideNav({ user }) {
+function SideNav({ account }) {
   const [accounts, setAccounts] = useState([]);
   const router = useRouter();
 
@@ -16,11 +16,10 @@ function SideNav({ user }) {
   };
 
   const handleAccountSwitch = async (newAccountId) => {
-    const oldAccountId = router.asPath.slice(-1);
     await fetch("/api/switch-account", {
       body: JSON.stringify({
         newAccountId,
-        oldAccountId,
+        oldAccountId: account.id,
       }),
       headers: {
         "Content-Type": "application/json",
@@ -29,6 +28,8 @@ function SideNav({ user }) {
     });
     router.push(`/accounts/invoices/add-invoice/${newAccountId}`);
   };
+
+  const selectedAccountId = account.id;
 
   return (
     <div className="sidenav">
@@ -48,8 +49,7 @@ function SideNav({ user }) {
               >
                 {account.name}
               </button>
-              {router.asPath ===
-              `/accounts/invoices/add-invoice/${account.id}` ? (
+              {selectedAccountId === account.id ? (
                 <div>
                   <h6>-Team Members-</h6>
                   {account.users.map((user) => {
