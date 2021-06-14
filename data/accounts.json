@@ -39,7 +39,7 @@
   {
     "id": "8",
     "name": "The New Barbarians",
-    "mrr": "45",
+    "mrr": 45,
     "users": [{ "id": "10", "role": "Admin" }]
   },
 
