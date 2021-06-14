@@ -44,7 +44,7 @@ export default function Home() {
       method: "POST",
     });
     setShowModal(false);
-    router.push(`/accounts/invoices/add-invoice/${accountId}`);
+    await router.push(`/accounts/invoices/add-invoice/${accountId}`);
   };
 
   return (

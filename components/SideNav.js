@@ -26,7 +26,7 @@ function SideNav({ account }) {
       },
       method: "POST",
     });
-    router.push(`/accounts/invoices/add-invoice/${newAccountId}`);
+    await router.push(`/accounts/invoices/add-invoice/${newAccountId}`);
   };
 
   const selectedAccountId = account.id;

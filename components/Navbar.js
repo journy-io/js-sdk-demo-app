@@ -13,7 +13,7 @@ export default function Navbar({ user, account }) {
       },
       method: "POST",
     });
-    router.push("/");
+    await router.push("/");
   };
 
   return (
