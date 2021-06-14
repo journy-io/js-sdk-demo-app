@@ -3,6 +3,8 @@ import "bootstrap/dist/css/bootstrap.css";
 
 export default function AddInvoice({ account }) {
   const [invoiceSent, setInvoiceSent] = useState(false);
+  const [featureTriggered, setFeatureTriggered] = useState({});
+
   const formRef = useRef();
 
   useEffect(() => {
@@ -27,6 +29,21 @@ export default function AddInvoice({ account }) {
     clearForm();
   };
 
+  const handleTriggerFeature = async (e) => {
+    e.preventDefault();
+    await fetch(`/api/trigger-feature`, {
+      body: JSON.stringify({
+        featureName: e.target.name,
+        accountId: account.id,
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "POST",
+    });
+    setFeatureTriggered({ success: true, name: e.target.name });
+  };
+
   const clearForm = () => {
     formRef.current.reset();
   };
@@ -34,11 +51,44 @@ export default function AddInvoice({ account }) {
   return (
     <div>
       <div className="container my-5 col-12">
+        <div className="row justify-content-center align-self-center mb-5">
+          <button
+            name="Feature 1"
+            id="feature1"
+            className="btn btn-primary"
+            onClick={(e) => handleTriggerFeature(e)}
+          >
+            Feature 1
+          </button>
+          <button
+            name="Feature 2"
+            id="feature2"
+            className="btn btn-primary"
+            onClick={(e) => handleTriggerFeature(e)}
+          >
+            Feature 2
+          </button>
+          <button
+            name="Feature 3"
+            id="feature3"
+            className="btn btn-primary"
+            onClick={(e) => handleTriggerFeature(e)}
+          >
+            Feature 3
+          </button>
+        </div>
         <p className="font-weight-bold text-center">{account.name}</p>
         {invoiceSent ? (
           <div className="my-2" id="form-submitted">
             <div className="alert alert-success" role="alert">
               The invoice was successfully sent.
+            </div>
+          </div>
+        ) : null}
+        {featureTriggered.success ? (
+          <div className="my-2" id="page-changed">
+            <div className="alert alert-success" role="alert">
+              {featureTriggered.name} was successfully Activated.
             </div>
           </div>
         ) : null}
