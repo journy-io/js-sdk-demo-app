@@ -8,12 +8,10 @@ async function handler(request, response) {
 
   await client.addEvent(
     Event.forUserInAccount(
-      "trigger-feature",
+      featureName,
       UserIdentified.byUserId(user.id),
       AccountIdentified.byAccountId(accountId)
-    ).withMetadata({
-      feature_name: featureName,
-    })
+    )
   );
 
   return response.send();

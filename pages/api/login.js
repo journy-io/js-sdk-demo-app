@@ -24,7 +24,6 @@ async function handler(request, response) {
       first_name: user.first_name,
       last_name: user.last_name,
       registered_at: user.registered_at,
-      telephone: user.telephone,
     },
   });
 
@@ -43,6 +42,7 @@ async function handler(request, response) {
       properties: {
         name: account.name,
         registered_at: new Date(),
+        mrr: account.mrr,
       },
       members: account.users.map((user) => {
         return { userId: user.id };
@@ -51,10 +51,7 @@ async function handler(request, response) {
   }
 
   await client.addEvent(
-    Event.forUser("user_login", UserIdentified.byUserId(user.id)).withMetadata({
-      login_time: new Date(),
-      userId: user.id,
-    })
+    Event.forUser("user_login", UserIdentified.byUserId(user.id))
   );
 
   return response.json(user);

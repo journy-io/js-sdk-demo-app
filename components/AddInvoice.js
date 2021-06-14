@@ -33,7 +33,7 @@ export default function AddInvoice({ account }) {
     e.preventDefault();
     await fetch(`/api/trigger-feature`, {
       body: JSON.stringify({
-        featureName: e.target.name,
+        featureName: e.target.id,
         accountId: account.id,
       }),
       headers: {
@@ -88,7 +88,7 @@ export default function AddInvoice({ account }) {
         {featureTriggered.success ? (
           <div className="my-2" id="page-changed">
             <div className="alert alert-success" role="alert">
-              {featureTriggered.name} was successfully Activated.
+              {featureTriggered.name} was successfully Triggered.
             </div>
           </div>
         ) : null}
