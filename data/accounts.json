@@ -2,7 +2,7 @@
   {
     "id": "4",
     "name": "The Beatles",
-    "mrr": "398",
+    "mrr": 3985,
     "users": [
       { "id": "12", "role": "Admin" },
       { "id": "5", "role": "Admin" },
@@ -13,7 +13,7 @@
   {
     "id": "5",
     "name": "The Rolling Stones",
-    "mrr": "1257",
+    "mrr": 1257,
     "users": [
       { "id": "8", "role": "Admin" },
       { "id": "9", "role": "Admin" },
@@ -23,13 +23,13 @@
   {
     "id": "6",
     "name": "Wings",
-    "mrr": "3567",
+    "mrr": 1567,
     "users": [{ "id": "5", "role": "Admin" }]
   },
   {
     "id": "7",
     "name": "Yoko Ono Band",
-    "mrr": "0",
+    "mrr": 0,
     "users": [
       { "id": "11", "role": "Admin" },
       { "id": "7", "role": "Admin" },
@@ -46,7 +46,7 @@
   {
     "id": "9",
     "name": "Plastic Ono Band",
-    "mrr": "455",
+    "mrr": 105,
     "users": [
       { "id": "11", "role": "Admin" },
       { "id": "6", "role": "Admin" },
@@ -57,7 +57,7 @@
   {
     "id": "10",
     "name": "SuperHeavy",
-    "mrr": "900",
+    "mrr": 900,
     "users": [{ "id": "9", "role": "Admin" }]
   }
 ]

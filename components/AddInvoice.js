@@ -88,7 +88,7 @@ export default function AddInvoice({ account }) {
         {featureTriggered.success ? (
           <div className="my-2" id="page-changed">
             <div className="alert alert-success" role="alert">
-              {featureTriggered.name} was successfully Triggered.
+              {featureTriggered.name} was successfully triggered.
             </div>
           </div>
         ) : null}
