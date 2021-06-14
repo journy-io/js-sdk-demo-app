@@ -42,6 +42,7 @@ async function handler(request, response) {
       properties: {
         name: account.name,
         registered_at: new Date(),
+        mrr: account.mrr,
       },
       members: account.users.map((user) => {
         return { userId: user.id };
