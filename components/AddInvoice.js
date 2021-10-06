@@ -4,6 +4,7 @@ import { useIntercom } from "react-use-intercom";
 
 export default function AddInvoice({ account }) {
   const [invoiceSent, setInvoiceSent] = useState(false);
+  const [intercomEventTriggered, setIntercomEventTriggered] = useState(false);
   const [featureTriggered, setFeatureTriggered] = useState({});
   const intercom = useIntercom();
 
@@ -50,6 +51,11 @@ export default function AddInvoice({ account }) {
     formRef.current.reset();
   };
 
+  function handleIntercomButtonClicked() {
+    intercom.trackEvent("button clicked", { demo: "app" });
+    setIntercomEventTriggered(true);
+  }
+
   return (
     <div>
       <div className="container my-5 col-12">
@@ -83,9 +89,7 @@ export default function AddInvoice({ account }) {
             id="intercomEvent"
             className="btn btn-primary"
             type="button"
-            onClick={() =>
-              intercom.trackEvent("button clicked", { demo: "app" })
-            }
+            onClick={handleIntercomButtonClicked}
           >
             Intercom event
           </button>
@@ -105,7 +109,13 @@ export default function AddInvoice({ account }) {
             </div>
           </div>
         ) : null}
-
+        {intercomEventTriggered ? (
+          <div className="my-2" id="page-changed">
+            <div className="alert alert-success" role="alert">
+              Intercom event was successfully triggered.
+            </div>
+          </div>
+        ) : null}
         <div className="card p-5">
           <div className="card-title text-center">
             <h1>Journy.io's Invoice Application</h1>
