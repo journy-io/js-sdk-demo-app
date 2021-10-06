@@ -1,9 +1,11 @@
 import React, { useState, useRef, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.css";
+import { useIntercom } from "react-use-intercom";
 
 export default function AddInvoice({ account }) {
   const [invoiceSent, setInvoiceSent] = useState(false);
   const [featureTriggered, setFeatureTriggered] = useState({});
+  const intercom = useIntercom();
 
   const formRef = useRef();
 
@@ -75,6 +77,17 @@ export default function AddInvoice({ account }) {
             onClick={(e) => handleTriggerFeature(e)}
           >
             Feature 3
+          </button>
+          <button
+            name="Intercom Event"
+            id="intercomEvent"
+            className="btn btn-primary"
+            type="button"
+            onClick={() =>
+              intercom.trackEvent("button clicked", { demo: "app" })
+            }
+          >
+            Intercom event
           </button>
         </div>
         <p className="font-weight-bold text-center">{account.name}</p>
