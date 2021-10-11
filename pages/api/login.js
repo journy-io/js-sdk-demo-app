@@ -1,7 +1,7 @@
 import users from "../../data/users.json";
 import getSession from "../../util/getSession";
 import { client } from "../../util/journy";
-import { Event, UserIdentified } from "@journyio/sdk";
+import { Event, UserIdentified, AccountIdentified } from "@journyio/sdk";
 import accounts from "../../data/accounts.json";
 
 async function handler(request, response) {
@@ -44,9 +44,11 @@ async function handler(request, response) {
         registered_at: new Date(),
         mrr: account.mrr,
       },
-      members: account.users.map((user) => {
-        return { userId: user.id };
-      }),
+    });
+
+    await client.addUsersToAccount({
+      account: AccountIdentified.byAccountId(account.id),
+      users: account.users.map((user) => UserIdentified.byUserId(user.id)),
     });
   }
 
