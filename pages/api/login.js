@@ -24,6 +24,7 @@ async function handler(request, response) {
       first_name: user.first_name,
       last_name: user.last_name,
       registered_at: user.registered_at,
+      company: user.company,
     },
   });
 
