@@ -5,6 +5,10 @@ import accounts from "../../../data/accounts.json";
 function handler(request, response) {
   const user = request.session.get("user");
 
+  if (!user) {
+    return response.status(401).send();
+  }
+
   return response.send(
     accounts
       .filter((account) =>
