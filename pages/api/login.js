@@ -49,7 +49,7 @@ async function handler(request, response) {
 
     await client.addUsersToAccount({
       account: AccountIdentified.byAccountId(account.id),
-      users: account.users.map((user) => UserIdentified.byUserId(user.id)),
+      users: [UserIdentified.byUserId(user.id)],
     });
   }
 
