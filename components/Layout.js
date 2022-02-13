@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Navbar from "./Navbar";
 import SideNav from "./SideNav";
-import { IntercomProvider, useIntercom } from "react-use-intercom";
+import { IntercomProvider } from "react-use-intercom";
 import useSWR from "swr";
 
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
