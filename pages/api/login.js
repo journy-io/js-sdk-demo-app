@@ -28,13 +28,6 @@ async function handler(request, response) {
     },
   });
 
-  if (request.cookies["__journey"]) {
-    await client.link({
-      userId: user.id,
-      deviceId: request.cookies["__journey"],
-    });
-  }
-
   for (const account of accounts.filter((account) =>
     account.users.find((member) => member.id === user.id)
   )) {
