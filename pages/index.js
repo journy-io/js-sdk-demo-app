@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import { useRouter } from "next/router";
 import ChooseAccount from "../components/ChooseAccount";
 import Image from "next/image";
+import Journy from "../components/Journy";
 
 export default function Home() {
   const [error, setError] = useState(false);
@@ -49,6 +50,7 @@ export default function Home() {
 
   return (
     <>
+      <Journy screenName="Login" />
       <ChooseAccount
         showModal={showModal}
         setShowModal={setShowModal}
