@@ -9,7 +9,6 @@ export default function Home() {
   const [error, setError] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [accounts, setAccounts] = useState([]);
-  const router = useRouter();
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
@@ -33,21 +32,6 @@ export default function Home() {
     setAccounts(accounts);
   };
 
-  const onSwitchAccount = async (accountId) => {
-    await fetch("/api/switch-account", {
-      body: JSON.stringify({
-        newAccountId: accountId,
-        oldAccountId: undefined,
-      }),
-      headers: {
-        "Content-Type": "application/json",
-      },
-      method: "POST",
-    });
-    setShowModal(false);
-    await router.push(`/accounts/invoices/add-invoice/${accountId}`);
-  };
-
   return (
     <>
       <Journy screenName="Login" />
@@ -55,7 +39,6 @@ export default function Home() {
         showModal={showModal}
         setShowModal={setShowModal}
         accounts={accounts}
-        onSwitchAccount={onSwitchAccount}
       />
       <div className=" my-5 col-12  text-center">
         <div className="logo">

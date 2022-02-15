@@ -1,13 +1,9 @@
+import Link from "next/link";
 import React from "react";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 
-export default function ChooseAccount({
-  showModal,
-  setShowModal,
-  accounts,
-  onSwitchAccount,
-}) {
+export default function ChooseAccount({ showModal, setShowModal, accounts }) {
   return (
     <>
       <Modal
@@ -22,12 +18,14 @@ export default function ChooseAccount({
         <Modal.Body>
           {accounts.map((account) => {
             return (
-              <Button
-                key={account.id}
-                onClick={() => onSwitchAccount(account.id)}
-              >
-                {account.name}
-              </Button>
+              <div key={account.id}>
+                <Link
+                  href={`/accounts/invoices/add-invoice/${account.id}`}
+                  passHref
+                >
+                  <Button variant="link">{account.name}</Button>
+                </Link>
+              </div>
             );
           })}
         </Modal.Body>

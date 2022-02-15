@@ -1,7 +1,48 @@
 import Script from "next/script";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import useEffectOnce from "../hooks/useEffectOnce";
+import { useRouter } from "next/router";
+import usePrevious from "../hooks/usePrevious";
+
+function sendScreenView({ account, screenName }) {
+  if (account) {
+    journy("screen", { name: screenName, accountId: account.id });
+  } else {
+    journy("screen", { name: screenName });
+  }
+}
 
 export default function Journy({ account, user, screenName }) {
+  const router = useRouter();
+  const [changes, setChanges] = useState(0);
+
+  useEffectOnce(() => {
+    if (user) {
+      journy("identify", { userId: user.id });
+    }
+
+    sendScreenView({ account, screenName });
+  });
+
+  const previousChanges = usePrevious(changes);
+  useEffect(() => {
+    if (previousChanges && changes !== previousChanges) {
+      sendScreenView({ account, screenName });
+    }
+  });
+
+  useEffect(() => {
+    function handleRouteChangeCompleted() {
+      setChanges((changes) => changes + 1);
+    }
+
+    router.events.on("routeChangeComplete", handleRouteChangeCompleted);
+
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChangeCompleted);
+    };
+  }, []);
+
   return (
     <>
       <Script
@@ -17,24 +58,6 @@ export default function Journy({ account, user, screenName }) {
           `,
         }}
       />
-      {user ? (
-        <Script
-          id="journy_identify"
-          dangerouslySetInnerHTML={{
-            __html: `journy("identify", { userId: "${user.id}" });`,
-          }}
-        />
-      ) : null}
-      {screenName ? (
-        <Script
-          id="journy_screen"
-          dangerouslySetInnerHTML={{
-            __html: account
-              ? `journy("screen", { name: "${screenName}", accountId: ${account.id} });`
-              : `journy("screen", { name: "${screenName}" });`,
-          }}
-        />
-      ) : null}
     </>
   );
 }
