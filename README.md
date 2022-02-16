@@ -2,7 +2,7 @@
 
 # Demo application JS SDK
 
-This demo application shows you how you can use our [Node.js SDK](https://github.com/journy-io/js-sdk) to track events and update properties.
+This demo application shows you how you can use our [Node.js SDK](https://github.com/journy-io/js-sdk) and web snippet to send screen views, track events and sync users/accounts.
 
 ### Install dependencies
 
