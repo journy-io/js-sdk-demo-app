@@ -5,7 +5,7 @@ import accounts from "../../../../data/accounts.json";
 
 export default function Account({ account }) {
   return (
-    <Layout account={account} screenName="Add invoice">
+    <Layout account={account} screenName="Main screen">
       <AddInvoice account={account} />
     </Layout>
   );
