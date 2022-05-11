@@ -6,6 +6,7 @@ export default function AddInvoice({ account }) {
   const [invoiceSent, setInvoiceSent] = useState(false);
   const [intercomEventTriggered, setIntercomEventTriggered] = useState(false);
   const [featureTriggered, setFeatureTriggered] = useState({});
+  const [payingTriggered, setPayingTriggered] = useState(false);
   const intercom = useIntercom();
 
   const formRef = useRef();
@@ -56,6 +57,19 @@ export default function AddInvoice({ account }) {
     setIntercomEventTriggered(true);
   }
 
+  async function handlePayButton() {
+    await fetch(`/api/start-paying`, {
+      body: JSON.stringify({
+        accountId: account.id,
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "POST",
+    });
+    setPayingTriggered(true);
+  }
+
   return (
     <div>
       <div className="container my-5 col-12">
@@ -85,7 +99,13 @@ export default function AddInvoice({ account }) {
             Feature 3
           </button>
           <button
-            name="Intercom Event"
+            className="btn btn-primary"
+            type="button"
+            onClick={handlePayButton}
+          >
+            Start paying
+          </button>
+          <button
             id="intercomEvent"
             className="btn btn-primary"
             type="button"
@@ -99,6 +119,13 @@ export default function AddInvoice({ account }) {
           <div className="my-2" id="form-submitted">
             <div className="alert alert-success" role="alert">
               The invoice was successfully sent.
+            </div>
+          </div>
+        ) : null}
+        {payingTriggered ? (
+          <div className="my-2" id="form-submitted">
+            <div className="alert alert-success" role="alert">
+              You are now a customer!
             </div>
           </div>
         ) : null}
