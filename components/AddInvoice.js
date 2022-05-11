@@ -14,7 +14,7 @@ export default function AddInvoice({ account }) {
     clearForm();
   });
 
-  const handleSubmit = async (e) => {
+  async function handleSubmit(e) {
     e.preventDefault();
     await fetch(`/api/add-invoice`, {
       body: JSON.stringify({
@@ -30,9 +30,9 @@ export default function AddInvoice({ account }) {
     });
     setInvoiceSent(true);
     clearForm();
-  };
+  }
 
-  const handleTriggerFeature = async (e) => {
+  async function handleTriggerFeature(e) {
     e.preventDefault();
     await fetch(`/api/trigger-feature`, {
       body: JSON.stringify({
@@ -45,7 +45,7 @@ export default function AddInvoice({ account }) {
       method: "POST",
     });
     setFeatureTriggered({ success: true, name: e.target.name });
-  };
+  }
 
   const clearForm = () => {
     formRef.current.reset();
