@@ -1,14 +1,11 @@
 import React, { useState, useRef, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.css";
-import { useIntercom } from "react-use-intercom";
 
 export default function AddInvoice({ account }) {
   const [invoiceSent, setInvoiceSent] = useState(false);
-  const [intercomEventTriggered, setIntercomEventTriggered] = useState(false);
   const [featureTriggered, setFeatureTriggered] = useState({});
   const [payingTriggered, setPayingTriggered] = useState(false);
-  const intercom = useIntercom();
-
+  const [churnTriggered, setChurnTriggered] = useState(false);
   const formRef = useRef();
 
   useEffect(() => {
@@ -52,11 +49,6 @@ export default function AddInvoice({ account }) {
     formRef.current.reset();
   };
 
-  function handleIntercomButtonClicked() {
-    intercom.trackEvent("button clicked", { demo: "app" });
-    setIntercomEventTriggered(true);
-  }
-
   async function handlePayButton() {
     await fetch(`/api/start-paying`, {
       body: JSON.stringify({
@@ -70,49 +62,67 @@ export default function AddInvoice({ account }) {
     setPayingTriggered(true);
   }
 
+  async function handleChurnButton() {
+    await fetch(`/api/churn`, {
+      body: JSON.stringify({
+        accountId: account.id,
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "POST",
+    });
+    setChurnTriggered(true);
+  }
+
   return (
     <div>
       <div className="container my-5 col-12">
-        <div className="row justify-content-center align-self-center mb-5">
-          <button
-            name="Feature 1"
-            id="feature1"
-            className="btn btn-primary"
-            onClick={(e) => handleTriggerFeature(e)}
-          >
-            Feature 1
-          </button>
-          <button
-            name="Feature 2"
-            id="feature2"
-            className="btn btn-primary"
-            onClick={(e) => handleTriggerFeature(e)}
-          >
-            Feature 2
-          </button>
-          <button
-            name="Feature 3"
-            id="feature3"
-            className="btn btn-primary"
-            onClick={(e) => handleTriggerFeature(e)}
-          >
-            Feature 3
-          </button>
-          <button
-            className="btn btn-primary"
-            type="button"
-            onClick={handlePayButton}
-          >
-            Start paying
-          </button>
-          <button
-            id="intercomEvent"
-            className="btn btn-primary"
-            type="button"
-            onClick={handleIntercomButtonClicked}
-          >
-            Intercom event
-          </button>
+        <div>
+          <div className="mb-3">
+            <button
+              name="Feature 1"
+              id="feature1"
+              className="btn btn-primary"
+              onClick={(e) => handleTriggerFeature(e)}
+            >
+              Feature 1
+            </button>
+            <button
+              name="Feature 2"
+              id="feature2"
+              className="btn btn-primary"
+              onClick={(e) => handleTriggerFeature(e)}
+            >
+              Feature 2
+            </button>
+            <button
+              name="Feature 3"
+              id="feature3"
+              className="btn btn-primary"
+              onClick={(e) => handleTriggerFeature(e)}
+            >
+              Feature 3
+            </button>
+          </div>
+        </div>
+        <div>
+          <div className="mb-5">
+            <button
+              className="btn btn-success"
+              type="button"
+              onClick={handlePayButton}
+            >
+              Start paying
+            </button>
+            <button
+              className="btn btn-danger"
+              type="button"
+              onClick={handleChurnButton}
+            >
+              Consider churning
+            </button>
+          </div>
         </div>
         <p className="font-weight-bold text-center">{account.name}</p>
         {invoiceSent ? (
@@ -129,17 +139,17 @@ export default function AddInvoice({ account }) {
             </div>
           </div>
         ) : null}
+        {churnTriggered ? (
+          <div className="my-2" id="form-submitted">
+            <div className="alert alert-success" role="alert">
+              You are about to churn!
+            </div>
+          </div>
+        ) : null}
         {featureTriggered.success ? (
           <div className="my-2" id="page-changed">
             <div className="alert alert-success" role="alert">
               {featureTriggered.name} was successfully triggered.
-            </div>
-          </div>
-        ) : null}
-        {intercomEventTriggered ? (
-          <div className="my-2" id="page-changed">
-            <div className="alert alert-success" role="alert">
-              Intercom event was successfully triggered.
             </div>
           </div>
         ) : null}
