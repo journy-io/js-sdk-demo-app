@@ -33,6 +33,7 @@ async function handler(request, response) {
   )) {
     await client.upsertAccount({
       accountId: account.id,
+      domain: account.domain,
       properties: {
         name: account.name,
         registered_at: new Date(),
