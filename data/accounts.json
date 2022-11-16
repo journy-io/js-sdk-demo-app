@@ -1,252 +1,1382 @@
 [
   {
-    "id": "01GJ0P2Z9RTV3693F09FV4SK0W",
+    "id": "01GJ0P6G9R2SPZTBS51MCYGHHN",
     "name": "Baremetrics",
-    "domain": "baremetrics.com"
+    "domain": "baremetrics.com",
+    "users": [
+      {
+        "id": "01GJ0P6GAMS33VQP0TAN3E34W2",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GAMRQW1444KTWQ6P29E",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GAN0MKMSX6AKX1KSD1V",
+        "role": "Admin"
+      }
+    ]
   },
   {
-    "id": "01GJ0P2Z9R1G32907QC7X5MTB1",
+    "id": "01GJ0P6G9RW4WZYNFBE7YGZGM8",
     "name": "Tally",
-    "domain": "tally.so"
+    "domain": "tally.so",
+    "users": [
+      {
+        "id": "01GJ0P6GANT6P0J6739D4KA3FZ",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GAPHNEX0190AP0H8NH5",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GAPHNMB9FD1WK0GQ3TJ",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GAP4K5CTN16SW3WD29E",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GAQJ03AACPT80PCR6M4",
+        "role": "Admin"
+      }
+    ]
   },
   {
-    "id": "01GJ0P2Z9R3QJ2CRSH6R61VCFF",
+    "id": "01GJ0P6G9R5PQ3G6TWQN2S5EKC",
     "name": "Auth0",
-    "domain": "auth0.com"
+    "domain": "auth0.com",
+    "users": [
+      {
+        "id": "01GJ0P6GAQ7J4ZV0BWTTHKJ9ZK",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GAQFNHXFB784GGDD05V",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GAR2Q0AGYETP3JWFXEH",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GARQGRM3QFJCVV2B1SC",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GARGHE078X15RWK6SPY",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GAR7HBAH533KPBXNJ9Q",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GASHFFF5G8CTECAGGYM",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GAS56665M46N93DAZ4X",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GASMTBDVS9NP8EAMXQV",
+        "role": "Admin"
+      }
+    ]
   },
   {
-    "id": "01GJ0P2Z9RD8C0YPNM29Y2AE2D",
+    "id": "01GJ0P6G9RC4R7FBF00CQ8AY0E",
     "name": "Dropbox",
-    "domain": "dropbox.com"
+    "domain": "dropbox.com",
+    "plan": "Pro",
+    "mrr": 200,
+    "users": [
+      {
+        "id": "01GJ0P6GAS594987VZ5706CHQY",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GATEKJYNRAX88D1WCE1",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GATPEX53RDC5QJ0KZ04",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GATTR582WCEKRTDT0CQ",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GAT3WPCJZWNT24FT3DH",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GATY0P9MDT89AE32TNB",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GAVYR5EF23E4D16665K",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GAVNXESD6NN0B8KJ51Z",
+        "role": "Admin"
+      }
+    ]
   },
   {
-    "id": "01GJ0P2Z9SFM4KFMEC9A7Y54A4",
+    "id": "01GJ0P6G9RPF2C3KM94E6AX6T1",
     "name": "Zoom",
-    "domain": "zoom.us"
+    "domain": "zoom.us",
+    "users": [
+      {
+        "id": "01GJ0P6GAVB3A8ZDXTYTYDC9P8",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GAVRFR5AT5YWBMTA5WF",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GAW281RE9622HKSC4NQ",
+        "role": "Admin"
+      }
+    ]
   },
   {
-    "id": "01GJ0P2Z9S9909W1D9W22XKPXW",
+    "id": "01GJ0P6G9RJ39DBW55WKSAYQ58",
     "name": "Datadog",
-    "domain": "datadoghq.com"
+    "domain": "datadoghq.com",
+    "users": [
+      {
+        "id": "01GJ0P6GAWSD6YBYJXQ5V7G9W7",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GAWZYKABSHP3ZE6FEHF",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GAX035T6RA870X4SXGT",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GAX7HPCRQNMAZ5BATZG",
+        "role": "Admin"
+      }
+    ]
   },
   {
-    "id": "01GJ0P2Z9SY6SRX48SDZFYJS4Y",
+    "id": "01GJ0P6G9R6MXP2Q3E91ZQAA1D",
     "name": "Wistia",
-    "domain": "wistia.com"
+    "domain": "wistia.com",
+    "users": [
+      {
+        "id": "01GJ0P6GAXVJ81ZPWJJJVRXTEG",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GAYG5E45ASH8E6EM2ZA",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GAYW9GBA534MEFJP8R7",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GAYESN0XADDS3XYJS02",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GAYH3DZYA98WCD0TQVT",
+        "role": "Admin"
+      }
+    ]
   },
   {
-    "id": "01GJ0P2Z9S47N6F0XJCYJ19WNY",
+    "id": "01GJ0P6G9RZ9P354QAMV52ZXPM",
     "name": "Miro",
-    "domain": "miro.com"
+    "domain": "miro.com",
+    "plan": "Pro",
+    "mrr": 1000,
+    "users": [
+      {
+        "id": "01GJ0P6GAZDS2KHJNAHCYF9ZVK",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GAZ84EM7GJTYJH0YBN6",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GAZTMCTPQCV1SCAKP1P",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GB0NNCT8ADGRBSX1PYQ",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GB0A3PJ7MNFG960VR1Q",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GB1AB8RR23EQQCWWGHN",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GB1K3EYN1WN3BRK5HKT",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GB1G7DJQZ2Q8MNET1Q8",
+        "role": "Admin"
+      }
+    ]
   },
   {
-    "id": "01GJ0P2Z9SH31JZ0FXMB9TKFPQ",
+    "id": "01GJ0P6G9R5C096JNWY1QD1TKB",
     "name": "Lucid",
-    "domain": "lucid.co"
+    "domain": "lucid.co",
+    "users": [
+      {
+        "id": "01GJ0P6GB2310BXKT8QHWPVRFT",
+        "role": "Admin"
+      }
+    ]
   },
   {
-    "id": "01GJ0P2Z9SJSDDCMNQRMQWXKKT",
+    "id": "01GJ0P6G9R5K4ENJX7CSE6RZFJ",
     "name": "Contentful",
-    "domain": "contentful.com"
+    "domain": "contentful.com",
+    "users": [
+      {
+        "id": "01GJ0P6GB290E3KKV9249520QY",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GB2NHTT2KMBPWMK2Q6F",
+        "role": "Admin"
+      }
+    ]
   },
   {
-    "id": "01GJ0P2Z9SK5BKFFKJFZF1GP7S",
+    "id": "01GJ0P6G9R466WTX9W6BQHV980",
     "name": "Strapi",
-    "domain": "strapi.io"
+    "domain": "strapi.io",
+    "plan": "Pro",
+    "mrr": 800,
+    "users": [
+      {
+        "id": "01GJ0P6GB20310TCR91MJ8TEPZ",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GB35AM14JR0Y3WG9S97",
+        "role": "Admin"
+      }
+    ]
   },
   {
-    "id": "01GJ0P2Z9SAK5NW51WXJXP8YT8",
+    "id": "01GJ0P6G9SS39K33TGXSNAWEAP",
     "name": "Elastic",
-    "domain": "elastic.co"
+    "domain": "elastic.co",
+    "users": [
+      {
+        "id": "01GJ0P6GB3RNHPDEGHF3JNS5BZ",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GB36MHR626VQD0JGF5Q",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GB495F41KRJZ0YNR88Z",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GB4VKDECKZC4DEF9DTA",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GB4YCWSV92P6QZP4PQJ",
+        "role": "Admin"
+      }
+    ]
   },
   {
-    "id": "01GJ0P2Z9SAG3PQZ3DG3SEHBH9",
+    "id": "01GJ0P6G9S2DB05A6KYFETX1YG",
     "name": "Redis",
-    "domain": "redis.com"
+    "domain": "redis.com",
+    "users": [
+      {
+        "id": "01GJ0P6GB5RJ1PKV7MYKJQ72Q0",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GB56DCDK5W1CQQBH0TN",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GB5W4E1TYEGE8SV0K12",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GB5VZ0H0BADX36J3BB3",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GB5SHC66B3YQVWPH48S",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GB614JR9T374TZZXG7F",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GB63W8W94P8SG2GM716",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GB6HQFV71WN12MRB5CN",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GB65FBCM8C9RPQMKC6A",
+        "role": "Admin"
+      }
+    ]
   },
   {
-    "id": "01GJ0P2Z9S95JV887V599QNX2W",
+    "id": "01GJ0P6G9S9VHBMX94VWD62SXA",
     "name": "Hotjar",
-    "domain": "hotjar.com"
+    "domain": "hotjar.com",
+    "users": [
+      {
+        "id": "01GJ0P6GB74ED52P4NJ7F0V7NG",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GB7BSNZ827CEHJBP62N",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GB70PS5WDBS4B6Q6AEJ",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GB7V389C1BJM24T1BZS",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GB7J2N63HQGPBDFMXKG",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GB8ZJB0V2T2G3WGFJKD",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GB84VCFP6TG5W7BXKQ9",
+        "role": "Admin"
+      }
+    ]
   },
   {
-    "id": "01GJ0P2Z9STBRW521M7Q6JFXXZ",
+    "id": "01GJ0P6G9SXB5VZ8HDVRT9QAP7",
     "name": "Algolia",
-    "domain": "aloglia.com"
+    "domain": "aloglia.com",
+    "plan": "Enterprise",
+    "mrr": 200,
+    "users": [
+      {
+        "id": "01GJ0P6GB8J0FNXBKDAA9XW2RX",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GB9NS9V4K6JFAXCT87E",
+        "role": "Admin"
+      }
+    ]
   },
   {
-    "id": "01GJ0P2Z9T4MAQ3S1X79RKWXMS",
+    "id": "01GJ0P6G9SYMNB25ZYQTKX987B",
     "name": "Close",
-    "domain": "close.com"
+    "domain": "close.com",
+    "users": [
+      {
+        "id": "01GJ0P6GB9VETT5RXKRM9152ST",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GB9G2M643YWFD7SVDZ4",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GB9HXWN7K8D24R027PQ",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GB9WD88R0T55BGC1ABV",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GBAJ42JHATVMK47EQW1",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GBAHDSWABVD5XT5AS1P",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GBA8CWHP5NM13NZHMA2",
+        "role": "Admin"
+      }
+    ]
   },
   {
-    "id": "01GJ0P2Z9T7RT7GA5FMRQ20WHZ",
+    "id": "01GJ0P6G9SM39P4SDF0XW9W4K7",
     "name": "Buffer",
-    "domain": "buffer.com"
+    "domain": "buffer.com",
+    "users": [
+      {
+        "id": "01GJ0P6GBBB2Y5JHAMS7WMEH5Q",
+        "role": "Admin"
+      }
+    ]
   },
   {
-    "id": "01GJ0P2Z9TMBHV2N9GS0RG70EA",
+    "id": "01GJ0P6G9S5SCXS5PMYNGT3WPW",
     "name": "Shopify",
-    "domain": "shopify.com"
+    "domain": "shopify.com",
+    "plan": "Enterprise",
+    "mrr": 800,
+    "users": [
+      {
+        "id": "01GJ0P6GBBTPGVNVBVNCKKRDGP",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GBC5Q841RQK7H2JNJZ6",
+        "role": "Admin"
+      }
+    ]
   },
   {
-    "id": "01GJ0P2Z9TCW5W062V6X8YA2NF",
+    "id": "01GJ0P6G9SWSF8WFY3ZGYK4VZE",
     "name": "Atlassian",
-    "domain": "atlassian.com"
+    "domain": "atlassian.com",
+    "users": [
+      {
+        "id": "01GJ0P6GBD139K1TQ6HPW73A7Q",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GBDDNXMT3WJ74BNH619",
+        "role": "Admin"
+      }
+    ]
   },
   {
-    "id": "01GJ0P2Z9T1FCTET8EPTCDAD4M",
+    "id": "01GJ0P6G9S3P2TRRTY4JEBDRF6",
     "name": "Twilio",
-    "domain": "twilio.com"
+    "domain": "twilio.com",
+    "users": [
+      {
+        "id": "01GJ0P6GBDCNAMXH62W9Y4TM3W",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GBE7S54EB24V6667NCS",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GBEEM3QV4Q86KC0R40J",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GBEQQDCVQGG9SEMBS08",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GBE8BG8V1TSJCEEDTPF",
+        "role": "Admin"
+      }
+    ]
   },
   {
-    "id": "01GJ0P2Z9T5V1C2J7CSQPG5194",
+    "id": "01GJ0P6G9S3JQ3ZKSDNH48BVZ3",
     "name": "MongoDB",
-    "domain": "mongodb.com"
+    "domain": "mongodb.com",
+    "users": [
+      {
+        "id": "01GJ0P6GBFQZ5SG5A9KNT56QX5",
+        "role": "Admin"
+      }
+    ]
   },
   {
-    "id": "01GJ0P2Z9TNP5717MDEEAAYM2T",
+    "id": "01GJ0P6G9S22R359J9ZTSMJ571",
     "name": "Grafana Labs",
-    "domain": "grafana.com"
+    "domain": "grafana.com",
+    "plan": "Enterprise",
+    "mrr": 800,
+    "users": [
+      {
+        "id": "01GJ0P6GBF6XGN1R94E28NWVC3",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GBF4J557ZK803K9NJH0",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GBFXH5PBH08RVMM5JAY",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GBG7EKQEH4MD3WH25D0",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GBGXR8GGXVDHTS22BKZ",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GBGYDY17JG4YXYX40GS",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GBGNQNGW8KKTSXF9FWJ",
+        "role": "Admin"
+      }
+    ]
   },
   {
-    "id": "01GJ0P2Z9T5QT5JJ7576HJ237R",
+    "id": "01GJ0P6G9T7ARVAJACT5BGTB8C",
     "name": "Cloudflare",
-    "domain": "cloudflare.com"
+    "domain": "cloudflare.com",
+    "users": [
+      {
+        "id": "01GJ0P6GBHY2YJX1J1GNHH8PYR",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GBHQSNWEZ49T6E5V1P7",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GBHG0ZSGBFJGRS5A46S",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GBJZJZCA0JEX77H94ED",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GBJHS59JV24X3AYCTX4",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GBJM5CRJK6J7SEAAQSD",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GBJ2DKFZ4V050HZZJNS",
+        "role": "Admin"
+      }
+    ]
   },
   {
-    "id": "01GJ0P2Z9TS8NMKZ3KCNDWWZ4Z",
+    "id": "01GJ0P6G9TNRW92H141AMCWDV5",
     "name": "Typeform",
-    "domain": "typeform.com"
+    "domain": "typeform.com",
+    "users": [
+      {
+        "id": "01GJ0P6GBJ9RB32XJ0NEJC3X27",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GBK1ACHZXM60CZDW1VJ",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GBKPG3T8C1H80Z6CV16",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GBK2FM259VJQW3JVNCX",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GBM61PSVZ4EB9YV31BR",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GBM7QAZR84VWPE27ET8",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GBN75HTTEWH8S8Z6W26",
+        "role": "Admin"
+      }
+    ]
   },
   {
-    "id": "01GJ0P2Z9TFAG4RPHK3PWMD14X",
+    "id": "01GJ0P6G9T3W1BFBF7ER3EJX0S",
     "name": "Trello",
-    "domain": "trello.com"
+    "domain": "trello.com",
+    "users": [
+      {
+        "id": "01GJ0P6GBNJT6GRSXBMRH1CDZT",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GBN3VZRJ37CA87VEHF8",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GBPZQPQ2J1KGG3P250V",
+        "role": "Admin"
+      }
+    ]
   },
   {
-    "id": "01GJ0P2Z9THAZRSDEX3ATGASW8",
+    "id": "01GJ0P6G9T2VZ78X3YZP3RHHWE",
     "name": "Figma",
-    "domain": "figma.com"
+    "domain": "figma.com",
+    "users": [
+      {
+        "id": "01GJ0P6GBPM9T64JSTP5N1A4N2",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GBQH4J7JHMKYMS59934",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GBQQWV117Q7PAFSQP3V",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GBRMKAQ923M6XS0Z7PE",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GBR4A5FY3VM9DH6RVVB",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GBRBGH380PYD91Z3T88",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GBR7H0FZR34WH9SSPTF",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GBSHN1ZFJHS62BNAKQD",
+        "role": "Admin"
+      }
+    ]
   },
   {
-    "id": "01GJ0P2Z9VYYG7G4P8TTZJ6307",
+    "id": "01GJ0P6G9T5H0F4PMEWGR2B81F",
     "name": "Squarespace",
-    "domain": "squarespace.com"
+    "domain": "squarespace.com",
+    "plan": "Enterprise",
+    "mrr": 200,
+    "users": [
+      {
+        "id": "01GJ0P6GBSPKJ238RVA4ZHA012",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GBS0XFNEBH37C1HNQ5A",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GBTXH2SGXCV9G08KNDR",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GBT9PJAHW4HBN00TJ5C",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GBVVY11ZB0TJ6TKE997",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GBV7J3FXKKB8G2GEWVM",
+        "role": "Admin"
+      }
+    ]
   },
   {
-    "id": "01GJ0P2Z9VQ5Z9XH49PAR6J9JG",
+    "id": "01GJ0P6G9TJ059FBNGP2K1M6C4",
     "name": "LastPass",
-    "domain": "lastpass.com"
+    "domain": "lastpass.com",
+    "plan": "Enterprise",
+    "mrr": 800,
+    "users": [
+      {
+        "id": "01GJ0P6GBVYTB9F3CBGA3M5W32",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GBWM934JZCBAXDNSC0Y",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GBW9DEHSCJ9WH45JT9V",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GBWSR9B7P16D9G7C1ZR",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GBWJSXPCEPVNDHJDP48",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GBXE3ZEMC71TG9M778B",
+        "role": "Admin"
+      }
+    ]
   },
   {
-    "id": "01GJ0P2Z9V2Z2WQRW0NCQ868Y0",
+    "id": "01GJ0P6G9TXG8HKPG08NCMJF76",
     "name": "ChartMogul",
-    "domain": "chartmogul.com"
+    "domain": "chartmogul.com",
+    "plan": "Enterprise",
+    "mrr": 200,
+    "users": [
+      {
+        "id": "01GJ0P6GBY9TEQ8D6BDX2WE5SV",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GBYKKBZ968PB4RRA4TQ",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GBZBV9JVPK30SWD6DKT",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GBZT3WC69EA8Z9RD11F",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GBZ9W28F7YZ7PQDPNJ6",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GBZEMYWE3GS4TD12M4J",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GBZ2V380R7PF3G4Y526",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GC1HEF0Y46VT4GBHG0F",
+        "role": "Admin"
+      }
+    ]
   },
   {
-    "id": "01GJ0P2Z9VQ2082JA1HYCHERN5",
+    "id": "01GJ0P6G9TG7ZA9D00JG3RYY63",
     "name": "Expensify",
-    "domain": "expensify.com"
+    "domain": "expensify.com",
+    "users": [
+      {
+        "id": "01GJ0P6GC1Z8KDSWAS5DC47KQ0",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GC276CRAGWBA7M00SK4",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GC2MMJBS73RPY4F3D2Z",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GC2B0H46S6BPQS360X1",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GC3YW68C28RDPWWN8S2",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GC3VW8FJW11EBPN0V8H",
+        "role": "Admin"
+      }
+    ]
   },
   {
-    "id": "01GJ0P2Z9WNYRVZD9SP5SG30XB",
+    "id": "01GJ0P6G9TP0PWK9FENZ7X4QGF",
     "name": "Customer.io",
-    "domain": "customer.io"
+    "domain": "customer.io",
+    "users": [
+      {
+        "id": "01GJ0P6GC3KA6J7VBTHV8S454N",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GC3K8T8EF6YT5F6J6M7",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GC3XXQD17Z138W8S1WT",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GC4D8X7P76AY9CFW9X7",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GC4CCF2HT7TH9CH1SDY",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GC4RQYEPJE5VDCC9V2V",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GC4K7S7R150V97XW96C",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GC59BW554V8J02R1YDS",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GC5K9A3H1NRKYXAVQ67",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GC5YHEZ8XQ6YR75CYQG",
+        "role": "Admin"
+      }
+    ]
   },
   {
-    "id": "01GJ0P2Z9WDV5T75FV3BGBT4DB",
+    "id": "01GJ0P6G9TFBMFSC9X7VD8XYB3",
     "name": "Crossbeam",
-    "domain": "crossbeam.com"
+    "domain": "crossbeam.com",
+    "users": [
+      {
+        "id": "01GJ0P6GC6XKXG1P07TBEA7AQE",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GC610GY11RG4R5N746V",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GC65MBQVVDBP1HYRR5A",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GC68YHX634B8BNTZ9Z0",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GC85E2ECKBV09HN352G",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GC85WB4WK5KRNH1ETKG",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GC92QBTVXGZ6GV66TAJ",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GC9QFXS79ZN8PABXGQX",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GC9VDXXXHVKXD3CQN7E",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GC97ZM8QM6PY04EEJWN",
+        "role": "Admin"
+      }
+    ]
   },
   {
-    "id": "01GJ0P2Z9W2FW26VBV3WT2NG0H",
+    "id": "01GJ0P6G9TW06DYNF77C0CGAEQ",
     "name": "Tailscale",
-    "domain": "tailscale.com"
+    "domain": "tailscale.com",
+    "users": [
+      {
+        "id": "01GJ0P6GC9WMTCQ0TARP2T10YD",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GC9VZ3N1CSEYKR6DREP",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GCAP79D83KFPZBEFEDC",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GCAJA4TJA23Z6WMATXA",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GCABFEHQY1J08T052YT",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GCAXZPTXWEMJSTPSASB",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GCAESX42HH4GGAQS6TC",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GCBFXSSKXN9GEG4S0HD",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GCB6Z2DMB6S8PQZYKCY",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GCBRR9ZNPFDZ44XX8WV",
+        "role": "Admin"
+      }
+    ]
   },
   {
-    "id": "01GJ0P2Z9WD80WWXDQ9APVX7E1",
+    "id": "01GJ0P6G9TZ2039EKGA6FFSYYT",
     "name": "Grammarly",
-    "domain": "grammarly.com"
+    "domain": "grammarly.com",
+    "users": [
+      {
+        "id": "01GJ0P6GCBDEPV5J7N7NBAAG99",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GCB5TT6KV4YE5CV1A4Q",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GCBT03BXW7R2X456MMJ",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GCCK4H6SBKBYV26ATYA",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GCCFAMWNP7CXMZZDN2D",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GCCJEKRS84CCRAD051W",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GCCJEM9WV805CE0YT3B",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GCCWBAB73M1XEZ6G2X7",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GCCSEDW0MWDA4TM3R2P",
+        "role": "Admin"
+      }
+    ]
   },
   {
-    "id": "01GJ0P2Z9W944BXNZ21SBEVJXZ",
+    "id": "01GJ0P6G9T9VBC8R33TF1F9XAZ",
     "name": "Intercom",
-    "domain": "intercom.com"
+    "domain": "intercom.com",
+    "users": [
+      {
+        "id": "01GJ0P6GCD6MBZDHVAHXT2XCGD",
+        "role": "Admin"
+      }
+    ]
   },
   {
-    "id": "01GJ0P2Z9WD77DKMYT1593E1QK",
+    "id": "01GJ0P6G9V13NKBETH2KDNABPN",
     "name": "Lemlist",
-    "domain": "lemlist.com"
+    "domain": "lemlist.com",
+    "plan": "Pro",
+    "mrr": 400,
+    "users": [
+      {
+        "id": "01GJ0P6GCDJ8N77MRQEWN82JJ8",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GCDE49BMH4TR93MFDKS",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GCD5PKN46MMZV0RN1JZ",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GCE1HM4M29QQXEFX1WM",
+        "role": "Admin"
+      }
+    ]
   },
   {
-    "id": "01GJ0P2Z9WDQZCNJ10K9BY0HW7",
+    "id": "01GJ0P6G9V8DFPAP5B2WMVYX7Y",
     "name": "Loom",
-    "domain": "loom.com"
+    "domain": "loom.com",
+    "users": [
+      {
+        "id": "01GJ0P6GCECHYH2BY5Q0R9G67M",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GCESS6XP0NVJ2BP8QHF",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GCEQX50M6Z71BJGAM7P",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GCF7JB5QAZS0YQJ5AV8",
+        "role": "Admin"
+      }
+    ]
   },
   {
-    "id": "01GJ0P2Z9WF78YAQHRH4PG41Y4",
+    "id": "01GJ0P6G9VPV42PGSPYVV3SP08",
     "name": "GitBook",
-    "domain": "gitbook.com"
+    "domain": "gitbook.com",
+    "users": [
+      {
+        "id": "01GJ0P6GCFAAT352PFXA7TJZPE",
+        "role": "Admin"
+      }
+    ]
   },
   {
-    "id": "01GJ0P2Z9WNK5GWJVKZ9467DJQ",
+    "id": "01GJ0P6G9VDNHC0VYQPYSHMDHM",
     "name": "LaunchDarkly",
-    "domain": "launchdarkly.com"
+    "domain": "launchdarkly.com",
+    "plan": "Pro",
+    "mrr": 400,
+    "users": [
+      {
+        "id": "01GJ0P6GCFMB0VAWSNAX0CTH4T",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GCFF3HNP6MR80QQRN6Q",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GCF0FKB02B08CBZ9C5G",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GCG6CGH58Z7XK3C5XVG",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GCGXD1WPSDQW698QKH4",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GCG9W9FGCWYE6HBJ529",
+        "role": "Admin"
+      }
+    ]
   },
   {
-    "id": "01GJ0P2Z9WR5VH2YWEGGY2Y44D",
+    "id": "01GJ0P6G9VZ883EN1KSA5NF40Y",
     "name": "Leadfeeder",
-    "domain": "leadfeeder.com"
+    "domain": "leadfeeder.com",
+    "users": [
+      {
+        "id": "01GJ0P6GCHJS3W8EBYZCTCR103",
+        "role": "Admin"
+      }
+    ]
   },
   {
-    "id": "01GJ0P2Z9WMYAN9H1G82S7EHGZ",
+    "id": "01GJ0P6G9V0PWV3X081XFP03NK",
     "name": "Front",
-    "domain": "front.com"
+    "domain": "front.com",
+    "users": [
+      {
+        "id": "01GJ0P6GCHB8M2ETPB0XBCNJPS",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GCH8K1FZD2CB6P14FTZ",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GCHQD3S3ZC9SQ8D0ZVQ",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GCH89CAPD49VJG98P8N",
+        "role": "Admin"
+      }
+    ]
   },
   {
-    "id": "01GJ0P2Z9WSQRPQBBSAN9G66CY",
+    "id": "01GJ0P6G9VMJVNHHHT3T6MAWSH",
     "name": "Messagebird",
-    "domain": "messagebird.com"
+    "domain": "messagebird.com",
+    "users": [
+      {
+        "id": "01GJ0P6GCJGGD218G1FQN4P6F9",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GCJHY9CA3H89A86058Z",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GCJHFPPF13FGFKNYET6",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GCJ9RX9JT07RJ2W7QQS",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GCJJ2R9R5RK99QJN90F",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GCKG5Z019DKP9PGBVB6",
+        "role": "Admin"
+      }
+    ]
   },
   {
-    "id": "01GJ0P2Z9W9AV2AQKKMX8BR2JS",
+    "id": "01GJ0P6G9V61DWEZA6GQPWZNMB",
     "name": "OneSignal",
-    "domain": "onesignal.com"
+    "domain": "onesignal.com",
+    "users": [
+      {
+        "id": "01GJ0P6GCKYFSQ24TWT64PKHRM",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GCKN7NX3RHTS0DZ4S1J",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GCKA10TJ6ZZDVP7EEVS",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GCKTJ80BQW3KJJRN7F4",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GCKXCGSZ994GVXW3RF8",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GCKE2FGTPT3BR4YAH11",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GCM0KAQ76BZ69W0AJEK",
+        "role": "Admin"
+      }
+    ]
   },
   {
-    "id": "01GJ0P2Z9XAF4RTSEKVCFF71SX",
+    "id": "01GJ0P6G9VZZ28C4PJ5YTYX2CS",
     "name": "Postman",
-    "domain": "postman.com"
+    "domain": "postman.com",
+    "plan": "Enterprise",
+    "mrr": 200,
+    "users": [
+      {
+        "id": "01GJ0P6GCM9JWS6D8B2W0ZVG11",
+        "role": "Admin"
+      }
+    ]
   },
   {
-    "id": "01GJ0P2Z9XVEY4VZJ6NTAXVC38",
+    "id": "01GJ0P6G9WW2999073ACJGPK6N",
     "name": "Recurly",
-    "domain": "recurly.com"
+    "domain": "recurly.com",
+    "plan": "Pro",
+    "mrr": 200,
+    "users": [
+      {
+        "id": "01GJ0P6GCMGP3J391ZTQ58N9C5",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GCMBZDXSJQXP3NGA89X",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GCMXCZWK0YCG0F918V2",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GCMK29XFHKST6M4F3ZP",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GCNKB2FMVE3E6DZ8DX7",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GCN3NAK4DV0M6W3HDMH",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GCNVE8ERNEFDSDFY84G",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GCNBNBHSJ0JRK9KGWDD",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GCPEH1XN81EGN2M6VFW",
+        "role": "Admin"
+      }
+    ]
   },
   {
-    "id": "01GJ0P2Z9XM81YPJMCKWHTKR1T",
+    "id": "01GJ0P6G9WD14JQ1HH8AF4KV85",
     "name": "ReadMe",
-    "domain": "readme.com"
+    "domain": "readme.com",
+    "users": [
+      {
+        "id": "01GJ0P6GCPQB647MH3DBTB3858",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GCPXGR8H0QXQW015C6H",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GCPNWRQHWCPW55RJX21",
+        "role": "Admin"
+      }
+    ]
   },
   {
-    "id": "01GJ0P2Z9XRTDR6SS78X10FQDG",
+    "id": "01GJ0P6G9WB28HYSBAXVZZSNCQ",
     "name": "Retool",
-    "domain": "retool.com"
+    "domain": "retool.com",
+    "users": [
+      {
+        "id": "01GJ0P6GCQEQS1S1T777RKHM6D",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GCQA9WAMFZEG02PRVAZ",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GCQYM9MFHKCWW5RXTQG",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GCRGEHACF09F211EGHN",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GCRWAKZ9Y94ANHY12B6",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GCRT781N0D17N1K96A3",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GCSPQEWTZQ2K428YC7Y",
+        "role": "Admin"
+      }
+    ]
   },
   {
-    "id": "01GJ0P2Z9XEZQ1917R0G1SENW9",
+    "id": "01GJ0P6G9WT7RB1PS3VJM34N69",
     "name": "ShiftX",
-    "domain": "shiftx.com"
+    "domain": "shiftx.com",
+    "users": [
+      {
+        "id": "01GJ0P6GCS5W0R64CJZ3S36JVY",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GCSSBZ06ADVWF6TC4J7",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GCTH3T9MXTJYCEJRVQM",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GCT94TBEE7VHXKGKEA4",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GCTT7P2MFYS3GEAMQR2",
+        "role": "Admin"
+      }
+    ]
   },
   {
-    "id": "01GJ0P2Z9XP0JZSXSTEBBYCJQ3",
+    "id": "01GJ0P6G9WNJ8GS0WCNBR2EA71",
     "name": "Tolstoy",
-    "domain": "tolstoy.com"
+    "domain": "tolstoy.com",
+    "plan": "Pro",
+    "mrr": 400,
+    "users": [
+      {
+        "id": "01GJ0P6GCVKV9WCFE54FYRYV5Y",
+        "role": "Admin"
+      },
+      {
+        "id": "01GJ0P6GCVZ5PD4X12JGAPCC27",
+        "role": "Admin"
+      }
+    ]
   },
   {
-    "id": "01GJ0P2Z9XFY73ASJEQ57CZDP1",
+    "id": "01GJ0P6G9WVSMND29PWESR7X19",
     "name": "1Password",
-    "domain": "1password.com"
+    "domain": "1password.com",
+    "plan": "Pro",
+    "mrr": 200,
+    "users": [
+      {
+        "id": "01GJ0P6GCV41ZZK85T9WQV13TA",
+        "role": "Admin"
+      }
+    ]
   }
 ]
