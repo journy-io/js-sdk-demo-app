@@ -1,63 +1,252 @@
 [
   {
-    "id": "4",
-    "name": "The Beatles",
-    "mrr": 3985,
-    "users": [
-      { "id": "12", "role": "Admin" },
-      { "id": "5", "role": "Admin" },
-      { "id": "6", "role": "Admin" },
-      { "id": "11", "role": "Admin" }
-    ]
+    "id": "01GJ0P2Z9RTV3693F09FV4SK0W",
+    "name": "Baremetrics",
+    "domain": "baremetrics.com"
   },
   {
-    "id": "5",
-    "name": "The Rolling Stones",
-    "mrr": 1257,
-    "users": [
-      { "id": "8", "role": "Admin" },
-      { "id": "9", "role": "Admin" },
-      { "id": "10", "role": "Admin" }
-    ]
+    "id": "01GJ0P2Z9R1G32907QC7X5MTB1",
+    "name": "Tally",
+    "domain": "tally.so"
   },
   {
-    "id": "6",
-    "name": "Wings",
-    "mrr": 1567,
-    "users": [{ "id": "5", "role": "Admin" }]
+    "id": "01GJ0P2Z9R3QJ2CRSH6R61VCFF",
+    "name": "Auth0",
+    "domain": "auth0.com"
   },
   {
-    "id": "7",
-    "name": "Yoko Ono Band",
-    "mrr": 0,
-    "users": [
-      { "id": "11", "role": "Admin" },
-      { "id": "7", "role": "Admin" },
-      { "id": "9", "role": "Admin" }
-    ]
+    "id": "01GJ0P2Z9RD8C0YPNM29Y2AE2D",
+    "name": "Dropbox",
+    "domain": "dropbox.com"
   },
   {
-    "id": "8",
-    "name": "The New Barbarians",
-    "mrr": 45,
-    "users": [{ "id": "10", "role": "Admin" }]
+    "id": "01GJ0P2Z9SFM4KFMEC9A7Y54A4",
+    "name": "Zoom",
+    "domain": "zoom.us"
   },
-
   {
-    "id": "9",
-    "name": "Plastic Ono Band",
-    "mrr": 105,
-    "users": [
-      { "id": "11", "role": "Admin" },
-      { "id": "6", "role": "Admin" },
-      { "id": "7", "role": "Admin" }
-    ]
+    "id": "01GJ0P2Z9S9909W1D9W22XKPXW",
+    "name": "Datadog",
+    "domain": "datadoghq.com"
   },
-
   {
-    "id": "10",
-    "name": "SuperHeavy",
-    "mrr": 900,
-    "users": [{ "id": "9", "role": "Admin" }]
+    "id": "01GJ0P2Z9SY6SRX48SDZFYJS4Y",
+    "name": "Wistia",
+    "domain": "wistia.com"
+  },
+  {
+    "id": "01GJ0P2Z9S47N6F0XJCYJ19WNY",
+    "name": "Miro",
+    "domain": "miro.com"
+  },
+  {
+    "id": "01GJ0P2Z9SH31JZ0FXMB9TKFPQ",
+    "name": "Lucid",
+    "domain": "lucid.co"
+  },
+  {
+    "id": "01GJ0P2Z9SJSDDCMNQRMQWXKKT",
+    "name": "Contentful",
+    "domain": "contentful.com"
+  },
+  {
+    "id": "01GJ0P2Z9SK5BKFFKJFZF1GP7S",
+    "name": "Strapi",
+    "domain": "strapi.io"
+  },
+  {
+    "id": "01GJ0P2Z9SAK5NW51WXJXP8YT8",
+    "name": "Elastic",
+    "domain": "elastic.co"
+  },
+  {
+    "id": "01GJ0P2Z9SAG3PQZ3DG3SEHBH9",
+    "name": "Redis",
+    "domain": "redis.com"
+  },
+  {
+    "id": "01GJ0P2Z9S95JV887V599QNX2W",
+    "name": "Hotjar",
+    "domain": "hotjar.com"
+  },
+  {
+    "id": "01GJ0P2Z9STBRW521M7Q6JFXXZ",
+    "name": "Algolia",
+    "domain": "aloglia.com"
+  },
+  {
+    "id": "01GJ0P2Z9T4MAQ3S1X79RKWXMS",
+    "name": "Close",
+    "domain": "close.com"
+  },
+  {
+    "id": "01GJ0P2Z9T7RT7GA5FMRQ20WHZ",
+    "name": "Buffer",
+    "domain": "buffer.com"
+  },
+  {
+    "id": "01GJ0P2Z9TMBHV2N9GS0RG70EA",
+    "name": "Shopify",
+    "domain": "shopify.com"
+  },
+  {
+    "id": "01GJ0P2Z9TCW5W062V6X8YA2NF",
+    "name": "Atlassian",
+    "domain": "atlassian.com"
+  },
+  {
+    "id": "01GJ0P2Z9T1FCTET8EPTCDAD4M",
+    "name": "Twilio",
+    "domain": "twilio.com"
+  },
+  {
+    "id": "01GJ0P2Z9T5V1C2J7CSQPG5194",
+    "name": "MongoDB",
+    "domain": "mongodb.com"
+  },
+  {
+    "id": "01GJ0P2Z9TNP5717MDEEAAYM2T",
+    "name": "Grafana Labs",
+    "domain": "grafana.com"
+  },
+  {
+    "id": "01GJ0P2Z9T5QT5JJ7576HJ237R",
+    "name": "Cloudflare",
+    "domain": "cloudflare.com"
+  },
+  {
+    "id": "01GJ0P2Z9TS8NMKZ3KCNDWWZ4Z",
+    "name": "Typeform",
+    "domain": "typeform.com"
+  },
+  {
+    "id": "01GJ0P2Z9TFAG4RPHK3PWMD14X",
+    "name": "Trello",
+    "domain": "trello.com"
+  },
+  {
+    "id": "01GJ0P2Z9THAZRSDEX3ATGASW8",
+    "name": "Figma",
+    "domain": "figma.com"
+  },
+  {
+    "id": "01GJ0P2Z9VYYG7G4P8TTZJ6307",
+    "name": "Squarespace",
+    "domain": "squarespace.com"
+  },
+  {
+    "id": "01GJ0P2Z9VQ5Z9XH49PAR6J9JG",
+    "name": "LastPass",
+    "domain": "lastpass.com"
+  },
+  {
+    "id": "01GJ0P2Z9V2Z2WQRW0NCQ868Y0",
+    "name": "ChartMogul",
+    "domain": "chartmogul.com"
+  },
+  {
+    "id": "01GJ0P2Z9VQ2082JA1HYCHERN5",
+    "name": "Expensify",
+    "domain": "expensify.com"
+  },
+  {
+    "id": "01GJ0P2Z9WNYRVZD9SP5SG30XB",
+    "name": "Customer.io",
+    "domain": "customer.io"
+  },
+  {
+    "id": "01GJ0P2Z9WDV5T75FV3BGBT4DB",
+    "name": "Crossbeam",
+    "domain": "crossbeam.com"
+  },
+  {
+    "id": "01GJ0P2Z9W2FW26VBV3WT2NG0H",
+    "name": "Tailscale",
+    "domain": "tailscale.com"
+  },
+  {
+    "id": "01GJ0P2Z9WD80WWXDQ9APVX7E1",
+    "name": "Grammarly",
+    "domain": "grammarly.com"
+  },
+  {
+    "id": "01GJ0P2Z9W944BXNZ21SBEVJXZ",
+    "name": "Intercom",
+    "domain": "intercom.com"
+  },
+  {
+    "id": "01GJ0P2Z9WD77DKMYT1593E1QK",
+    "name": "Lemlist",
+    "domain": "lemlist.com"
+  },
+  {
+    "id": "01GJ0P2Z9WDQZCNJ10K9BY0HW7",
+    "name": "Loom",
+    "domain": "loom.com"
+  },
+  {
+    "id": "01GJ0P2Z9WF78YAQHRH4PG41Y4",
+    "name": "GitBook",
+    "domain": "gitbook.com"
+  },
+  {
+    "id": "01GJ0P2Z9WNK5GWJVKZ9467DJQ",
+    "name": "LaunchDarkly",
+    "domain": "launchdarkly.com"
+  },
+  {
+    "id": "01GJ0P2Z9WR5VH2YWEGGY2Y44D",
+    "name": "Leadfeeder",
+    "domain": "leadfeeder.com"
+  },
+  {
+    "id": "01GJ0P2Z9WMYAN9H1G82S7EHGZ",
+    "name": "Front",
+    "domain": "front.com"
+  },
+  {
+    "id": "01GJ0P2Z9WSQRPQBBSAN9G66CY",
+    "name": "Messagebird",
+    "domain": "messagebird.com"
+  },
+  {
+    "id": "01GJ0P2Z9W9AV2AQKKMX8BR2JS",
+    "name": "OneSignal",
+    "domain": "onesignal.com"
+  },
+  {
+    "id": "01GJ0P2Z9XAF4RTSEKVCFF71SX",
+    "name": "Postman",
+    "domain": "postman.com"
+  },
+  {
+    "id": "01GJ0P2Z9XVEY4VZJ6NTAXVC38",
+    "name": "Recurly",
+    "domain": "recurly.com"
+  },
+  {
+    "id": "01GJ0P2Z9XM81YPJMCKWHTKR1T",
+    "name": "ReadMe",
+    "domain": "readme.com"
+  },
+  {
+    "id": "01GJ0P2Z9XRTDR6SS78X10FQDG",
+    "name": "Retool",
+    "domain": "retool.com"
+  },
+  {
+    "id": "01GJ0P2Z9XEZQ1917R0G1SENW9",
+    "name": "ShiftX",
+    "domain": "shiftx.com"
+  },
+  {
+    "id": "01GJ0P2Z9XP0JZSXSTEBBYCJQ3",
+    "name": "Tolstoy",
+    "domain": "tolstoy.com"
+  },
+  {
+    "id": "01GJ0P2Z9XFY73ASJEQ57CZDP1",
+    "name": "1Password",
+    "domain": "1password.com"
   }
 ]
