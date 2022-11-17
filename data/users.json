@@ -1998,5 +1998,13 @@
     "email": "daniel.watson@1password.com",
     "company": "1Password",
     "registered_at": "2022-11-05T01:06:16.571Z"
+  },
+  {
+    "id": "01GJ2D5FNH43JRKFJ4S54YA5F4",
+    "first_name": "Elon",
+    "last_name": "Musk",
+    "email": "elon.musk@tesla.com",
+    "company": "Tesla",
+    "registered_at": "2022-11-04T01:06:16.571Z"
   }
 ]

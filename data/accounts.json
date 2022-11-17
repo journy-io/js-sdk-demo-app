@@ -1378,5 +1378,44 @@
         "role": "Admin"
       }
     ]
+  },
+  {
+    "id": "01GJ2D1VAY8KBP2R7RX75W91JS",
+    "name": "SpaceX",
+    "domain": "spacex.com",
+    "plan": "Enterprise",
+    "mrr": 800,
+    "users": [
+      {
+        "id": "01GJ2D5FNH43JRKFJ4S54YA5F4",
+        "role": "Admin"
+      }
+    ]
+  },
+  {
+    "id": "01GJ2D8MWDEXE9RMXD6Q9ZY3WA",
+    "name": "Twitter",
+    "domain": "twitter.com",
+    "plan": "Enterprise",
+    "mrr": 600,
+    "users": [
+      {
+        "id": "01GJ2D5FNH43JRKFJ4S54YA5F4",
+        "role": "Admin"
+      }
+    ]
+  },
+  {
+    "id": "01GJ2D8X4NCA67XJ25EPYTVQDD",
+    "name": "Tesla",
+    "domain": "tesla.com",
+    "plan": "Pro",
+    "mrr": 400,
+    "users": [
+      {
+        "id": "01GJ2D5FNH43JRKFJ4S54YA5F4",
+        "role": "Admin"
+      }
+    ]
   }
 ]
