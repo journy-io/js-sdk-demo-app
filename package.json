@@ -13,7 +13,7 @@
   "dependencies": {
     "@journyio/sdk": "^3.0.2",
     "bootstrap": "^4.6.0",
-    "next": "^11.1.2",
+    "next": "12.3.3",
     "next-iron-session": "^4.2.0",
     "react": "^17.0.1",
     "react-bootstrap": "^1.5.2",
