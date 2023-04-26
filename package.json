@@ -11,7 +11,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "@journyio/sdk": "^3.0.2",
+    "@segment/analytics-node": "1.0.0-beta.26",
     "bootstrap": "^4.6.0",
     "next": "12.3.3",
     "next-iron-session": "^4.2.0",

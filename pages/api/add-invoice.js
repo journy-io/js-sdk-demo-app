@@ -1,22 +1,22 @@
-import { Event, UserIdentified, AccountIdentified } from "@journyio/sdk";
-import { client } from "../../util/journy";
+import { analytics } from "../../util/analytics";
 import getSession from "../../util/getSession";
 
 async function handler(request, response) {
   const { client_email, accountId, invoice_price, services } = request.body;
   const user = request.session.get("user");
 
-  await client.addEvent(
-    Event.forUserInAccount(
-      "create-invoice",
-      UserIdentified.byUserId(user.id),
-      AccountIdentified.byAccountId(accountId)
-    ).withMetadata({
-      client_email,
-      invoice_price,
-      services,
-    })
-  );
+  analytics.track({
+    userId: user.id,
+    event: "create-invoice",
+    properties: {
+      client_email: client_email,
+      invoice_price: invoice_price,
+      services: services,
+    },
+    context: {
+      groupId: accountId,
+    },
+  });
 
   return response.send();
 }

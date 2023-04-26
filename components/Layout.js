@@ -3,7 +3,7 @@ import Navbar from "./Navbar";
 import SideNav from "./SideNav";
 import { IntercomProvider } from "react-use-intercom";
 import useSWR from "swr";
-import Journy from "./Journy";
+import Analytics from "./Analytics";
 
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
@@ -17,7 +17,7 @@ export default function Layout({ children, account, screenName }) {
 
   return (
     <>
-      <Journy user={user} account={account} screenName={screenName} />
+      <Analytics user={user} account={account} screenName={screenName} />
       <IntercomProvider
         appId={process.env.NEXT_PUBLIC_INTERCOM_APP_ID}
         autoBoot={true}

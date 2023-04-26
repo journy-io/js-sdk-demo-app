@@ -1,13 +1,16 @@
-import { Event, AccountIdentified } from "@journyio/sdk";
-import { client } from "../../util/journy";
+import { analytics } from "../../util/analytics";
 import getSession from "../../util/getSession";
 
 async function handler(request, response) {
   const { accountId } = request.body;
 
-  await client.addEvent(
-    Event.forAccount("churned", AccountIdentified.byAccountId(accountId))
-  );
+  analytics.track({
+    anonymousId: accountId,
+    event: "churned",
+    context: {
+      groupId: accountId,
+    },
+  });
 
   return response.send();
 }
