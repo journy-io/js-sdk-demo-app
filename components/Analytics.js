@@ -1,8 +1,8 @@
-import Script from "next/script";
 import React, { useEffect, useState } from "react";
 import useEffectOnce from "../hooks/useEffectOnce";
 import { useRouter } from "next/router";
 import usePrevious from "../hooks/usePrevious";
+import Script from "next/script";
 
 function sendScreenView({ account, screenName }) {
   if (account) {
@@ -19,15 +19,32 @@ export default function Analytics({ account, user, screenName }) {
   useEffectOnce(() => {
     if (user) {
       window.analytics.identify(user.id);
+
+      if (window.Appcues) {
+        window.Appcues.identify(user.id, {
+          name: `${user.first_name} ${user.last_name}`,
+          email: user.email,
+        });
+
+        window.Appcues.group(account.id, { name: account.name });
+      }
     }
 
     sendScreenView({ account, screenName });
+
+    if (window.Appcues) {
+      window.Appcues.page();
+    }
   });
 
   const previousChanges = usePrevious(changes);
   useEffect(() => {
     if (previousChanges && changes !== previousChanges) {
       sendScreenView({ account, screenName });
+
+      if (window.Appcues) {
+        window.Appcues.page();
+      }
     }
   });
 
@@ -45,6 +62,9 @@ export default function Analytics({ account, user, screenName }) {
 
   return (
     <>
+      <Script
+        src={`https://fast.appcues.com/${process.env.NEXT_PUBLIC_APPCUES_ACCOUNT_ID}.js`}
+      />
       <Script
         id="segment_analytics"
         dangerouslySetInnerHTML={{
